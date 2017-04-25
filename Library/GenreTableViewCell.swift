@@ -1,17 +1,14 @@
 //
-//  BookTableViewCell.swift
+//  GenreTableViewCell.swift
 //  Library
 //
-//  Created by 柳本宗達 on 2017/04/22.
+//  Created by 柳本宗達 on 2017/04/25.
 //  Copyright © 2017年 柳本宗達. All rights reserved.
 //
 
 import UIKit
 
-class BookTableViewCell: UITableViewCell {
-    
-    @IBOutlet var BookName: UILabel!
-    
+class GenreTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -23,11 +23,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufp-Vp-JWd">
-                                <rect key="frame" x="137" y="431" width="46" height="30"/>
+                                <rect key="frame" x="137" y="428" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="本追加"/>
                                 <connections>
-                                    <segue destination="ROO-bO-fVB" kind="show" id="vYu-2h-mxr"/>
+                                    <segue destination="B3M-4Y-hl7" kind="show" id="mub-Oo-2tL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,7 +62,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="一覧" id="0Wx-GL-4UZ">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="oH1-f3-dRZ"/>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="oH1-f3-dRZ">
+                            <connections>
+                                <segue destination="nIK-Ew-Nr1" kind="show" id="D78-Y0-tGr"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="8Wp-z0-6yV">
                                 <connections>
@@ -78,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="1728.75" y="35.91549295774648"/>
         </scene>
-        <!--View Controller-->
+        <!--新規追加-->
         <scene sceneID="hvQ-fV-O4J">
             <objects>
-                <viewController id="r3T-TK-KhP" sceneMemberID="viewController">
+                <viewController id="r3T-TK-KhP" customClass="EditBookViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Omb-if-liZ"/>
                         <viewControllerLayoutGuide type="bottom" id="0cp-OZ-bum"/>
@@ -118,19 +122,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KgW-a6-xgn">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="新規追加" id="26n-pW-ft6">
-                                        <barButtonItem key="leftBarButtonItem" title="もどる" id="0jG-sp-xpj"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="新規追加" id="Ppt-qa-T8Y">
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="Gs1-vd-7mJ">
+                            <connections>
+                                <segue destination="8gQ-BY-rJB" kind="show" id="aBQ-fe-FGP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="jZy-k6-q0T">
+                            <connections>
+                                <action selector="saveTitle" destination="r3T-TK-KhP" id="aau-GW-PWs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="comentTextField" destination="7ez-B3-PfI" id="Wpx-uT-gQj"/>
+                        <outlet property="titleTextField" destination="o6b-yM-ASX" id="6tF-Q8-gPk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEP-qa-HjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="729.375" y="35.91549295774648"/>
         </scene>
-        <!--Genre List Table View Controller-->
+        <!--ジャンル-->
         <scene sceneID="Fir-LS-aFX">
             <objects>
                 <tableViewController id="nIK-Ew-Nr1" customClass="GenreListTableViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -177,13 +188,74 @@
                             <outlet property="delegate" destination="nIK-Ew-Nr1" id="0hf-ad-0dy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="QY6-ed-UYS">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="x95-G3-85x"/>
+                    <navigationItem key="navigationItem" title="ジャンル" id="QY6-ed-UYS">
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="pV2-GU-gS0">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="sJn-3N-U1d"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="x95-G3-85x">
+                                <connections>
+                                    <segue destination="eK8-E7-GHI" kind="show" id="G5q-QY-9Gl"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="削除" id="qmG-2p-xMj"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYN-uW-Iml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1726.875" y="723.59154929577471"/>
+        </scene>
+        <!--ジャンル-->
+        <scene sceneID="hqi-fF-qqj">
+            <objects>
+                <viewController id="eK8-E7-GHI" customClass="EditGenreViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FFm-Qo-09r"/>
+                        <viewControllerLayoutGuide type="bottom" id="zJH-Uj-ADG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Go6-53-QOG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ジャンル名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-D3-SrD">
+                                <rect key="frame" x="45" y="136" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfH-0r-d1J">
+                                <rect key="frame" x="177" y="131" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ジャンル" id="90G-dD-xwx">
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="m2R-tq-hJJ">
+                            <connections>
+                                <segue destination="nIK-Ew-Nr1" kind="show" id="dPf-Zu-Nqk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="aFi-rF-nBX">
+                            <connections>
+                                <action selector="saveGenre" destination="eK8-E7-GHI" id="k1u-uC-hYg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="genreTextField" destination="nfH-0r-d1J" id="xwE-XY-AWB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iet-Fp-h55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2419" y="724"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CVw-gE-3zk">
@@ -204,4 +276,8 @@
             <point key="canvasLocation" x="727.5" y="723.59154929577471"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aBQ-fe-FGP"/>
+        <segue reference="dPf-Zu-Nqk"/>
+    </inferredMetricsTieBreakers>
 </document>

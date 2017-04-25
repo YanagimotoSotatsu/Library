@@ -18,6 +18,10 @@
 		DD6CE4651EAB4CB3007BB91F /* GenreListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4641EAB4CB3007BB91F /* GenreListTableViewController.swift */; };
 		DD6CE4681EAB4CF7007BB91F /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4661EAB4CF7007BB91F /* BookTableViewCell.swift */; };
 		DD6CE4691EAB4CF7007BB91F /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE4671EAB4CF7007BB91F /* BookTableViewCell.xib */; };
+		DD6CE46C1EAEF407007BB91F /* GenreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE46A1EAEF407007BB91F /* GenreTableViewCell.swift */; };
+		DD6CE46D1EAEF407007BB91F /* GenreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE46B1EAEF407007BB91F /* GenreTableViewCell.xib */; };
+		DD6CE46F1EAEF449007BB91F /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE46E1EAEF449007BB91F /* EditBookViewController.swift */; };
+		DD6CE4711EAEF45A007BB91F /* EditGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4701EAEF45A007BB91F /* EditGenreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		DD6CE4641EAB4CB3007BB91F /* GenreListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreListTableViewController.swift; sourceTree = "<group>"; };
 		DD6CE4661EAB4CF7007BB91F /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		DD6CE4671EAB4CF7007BB91F /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
+		DD6CE46A1EAEF407007BB91F /* GenreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreTableViewCell.swift; sourceTree = "<group>"; };
+		DD6CE46B1EAEF407007BB91F /* GenreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenreTableViewCell.xib; sourceTree = "<group>"; };
+		DD6CE46E1EAEF449007BB91F /* EditBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
+		DD6CE4701EAEF45A007BB91F /* EditGenreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGenreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,10 @@
 				DD6CE4641EAB4CB3007BB91F /* GenreListTableViewController.swift */,
 				DD6CE4661EAB4CF7007BB91F /* BookTableViewCell.swift */,
 				DD6CE4671EAB4CF7007BB91F /* BookTableViewCell.xib */,
+				DD6CE46A1EAEF407007BB91F /* GenreTableViewCell.swift */,
+				DD6CE46B1EAEF407007BB91F /* GenreTableViewCell.xib */,
+				DD6CE46E1EAEF449007BB91F /* EditBookViewController.swift */,
+				DD6CE4701EAEF45A007BB91F /* EditGenreViewController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -247,6 +259,7 @@
 				DD6CE4691EAB4CF7007BB91F /* BookTableViewCell.xib in Resources */,
 				DD6CE43F1EAB47CA007BB91F /* LaunchScreen.storyboard in Resources */,
 				DD6CE43C1EAB47CA007BB91F /* Assets.xcassets in Resources */,
+				DD6CE46D1EAEF407007BB91F /* GenreTableViewCell.xib in Resources */,
 				DD6CE43A1EAB47CA007BB91F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +290,9 @@
 				DD6CE4351EAB47CA007BB91F /* AppDelegate.swift in Sources */,
 				DD6CE4681EAB4CF7007BB91F /* BookTableViewCell.swift in Sources */,
 				DD6CE4631EAB4C72007BB91F /* BookListTableViewController.swift in Sources */,
+				DD6CE46C1EAEF407007BB91F /* GenreTableViewCell.swift in Sources */,
+				DD6CE4711EAEF45A007BB91F /* EditGenreViewController.swift in Sources */,
+				DD6CE46F1EAEF449007BB91F /* EditBookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
