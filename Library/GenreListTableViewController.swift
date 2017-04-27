@@ -58,6 +58,9 @@ class GenreListTableViewController: UITableViewController {
         return cellGenre
         
     }
+    @IBAction func deleteGenre(){
+        
+    }
 
 
 }

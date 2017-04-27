@@ -56,6 +56,8 @@ class BookListTableViewController: UITableViewController {
         let nowIndexPathDictionary = bookArray[indexPath.row]
         
         cellBook.bookLabel.text = nowIndexPathDictionary["題名"]
+        cellBook.comentLabel.text = nowIndexPathDictionary["コメント"]
+
         
         return cellBook
         
