@@ -10,7 +10,7 @@ import UIKit
 
 class BookTableViewCell: UITableViewCell {
     
-    @IBOutlet var BookName: UILabel!
+    @IBOutlet var bookLabel: UILabel!
     
 
     override func awakeFromNib() {
