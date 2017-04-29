@@ -47,7 +47,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYN-uW-Iml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="303"/>
+            <point key="canvasLocation" x="1403" y="-97"/>
         </scene>
         <!--ジャンル-->
         <scene sceneID="hqi-fF-qqj">
@@ -79,11 +79,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="ジャンル" id="90G-dD-xwx">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="m2R-tq-hJJ">
-                            <connections>
-                                <segue destination="nIK-Ew-Nr1" kind="show" id="dPf-Zu-Nqk"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="m2R-tq-hJJ"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="aFi-rF-nBX">
                             <connections>
                                 <action selector="saveGenre" destination="eK8-E7-GHI" id="k1u-uC-hYg"/>
@@ -96,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iet-Fp-h55" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904.375" y="304.22535211267603"/>
+            <point key="canvasLocation" x="2368" y="-97"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iXq-p0-YYe">
@@ -115,8 +111,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="本追加"/>
                                 <connections>
-                                    <action selector="aa" destination="cLS-SM-rcO" eventType="touchUpInside" id="64q-Cz-Y9t"/>
-                                    <segue destination="B3M-4Y-hl7" kind="presentation" id="HqB-sL-tMq"/>
+                                    <segue destination="B3M-4Y-hl7" kind="show" id="tmM-Aj-KF5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,10 +138,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycn-Nc-ubT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="304"/>
+            <point key="canvasLocation" x="681" y="-97"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dPf-Zu-Nqk"/>
-    </inferredMetricsTieBreakers>
 </document>
