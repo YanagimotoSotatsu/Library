@@ -11,8 +11,9 @@ import UIKit
 class GenreListTableViewController: UITableViewController {
     
     var genreArray: [Dictionary<String, String>] = []
-    
     let genreSaveData = UserDefaults.standard
+    
+    
 
 
     override func viewDidLoad() {
@@ -44,7 +45,7 @@ class GenreListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+//        // #warning Incomplete implementation, return the number of rows
         return genreArray.count
     }
     
@@ -58,9 +59,6 @@ class GenreListTableViewController: UITableViewController {
         return cellGenre
         
     }
-    @IBAction func deleteGenre(){
-        
-    }
-
+       
 
 }

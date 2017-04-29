@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cLS-SM-rcO">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,169 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufp-Vp-JWd">
-                                <rect key="frame" x="137" y="428" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="本追加"/>
-                                <connections>
-                                    <segue destination="B3M-4Y-hl7" kind="show" id="mub-Oo-2tL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-dc-YcF">
-                                <rect key="frame" x="137" y="329" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="ROO-bO-fVB" kind="show" id="yDy-bW-Va2"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--一覧-->
-        <scene sceneID="A7C-R4-NlY">
-            <objects>
-                <tableViewController id="8gQ-BY-rJB" customClass="BookListTableViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hJA-Yi-FiJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eKm-Pn-4IP">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKm-Pn-4IP" id="OZM-aH-yT6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8gQ-BY-rJB" id="i7F-Wy-WlX"/>
-                            <outlet property="delegate" destination="8gQ-BY-rJB" id="N85-dZ-uo1"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="一覧" id="0Wx-GL-4UZ">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="oH1-f3-dRZ">
-                            <connections>
-                                <segue destination="nIK-Ew-Nr1" kind="show" id="D78-Y0-tGr"/>
-                            </connections>
-                        </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="8Wp-z0-6yV">
-                                <connections>
-                                    <segue destination="r3T-TK-KhP" kind="show" id="fLH-bT-91R"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="削除" id="jzN-QR-v1Y"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BIq-0m-UCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1727" y="-661"/>
-        </scene>
-        <!--新規追加-->
-        <scene sceneID="hvQ-fV-O4J">
-            <objects>
-                <viewController id="r3T-TK-KhP" customClass="EditBookViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Omb-if-liZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="0cp-OZ-bum"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fuY-hZ-JNT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="題名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fz-iD-HZj">
-                                <rect key="frame" x="45" y="105" width="35" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6b-yM-ASX">
-                                <rect key="frame" x="144" y="100" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ez-B3-PfI">
-                                <rect key="frame" x="45" y="204" width="230" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一言" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEu-Uy-cJx">
-                                <rect key="frame" x="45" y="175" width="35" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="新規追加" id="Ppt-qa-T8Y">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="Gs1-vd-7mJ">
-                            <connections>
-                                <segue destination="8gQ-BY-rJB" kind="show" id="aBQ-fe-FGP"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="jZy-k6-q0T">
-                            <connections>
-                                <action selector="saveTitle" destination="r3T-TK-KhP" id="aau-GW-PWs"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="comentTextField" destination="7ez-B3-PfI" id="Wpx-uT-gQj"/>
-                        <outlet property="titleTextField" destination="o6b-yM-ASX" id="6tF-Q8-gPk"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qEP-qa-HjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2841" y="-698"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Agz-dX-byj">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ROO-bO-fVB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jkf-JJ-Snx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8gQ-BY-rJB" kind="relationship" relationship="rootViewController" id="Rnw-Ez-mlq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KPD-Xb-MXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="996" y="-661"/>
-        </scene>
         <!--ジャンル-->
         <scene sceneID="Fir-LS-aFX">
             <objects>
@@ -197,11 +34,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ジャンル" id="QY6-ed-UYS">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="pV2-GU-gS0">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="sJn-3N-U1d"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="pV2-GU-gS0"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="x95-G3-85x">
                                 <connections>
@@ -214,7 +47,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYN-uW-Iml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="305"/>
+            <point key="canvasLocation" x="1708" y="303"/>
         </scene>
         <!--ジャンル-->
         <scene sceneID="hqi-fF-qqj">
@@ -263,7 +96,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iet-Fp-h55" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2906" y="305"/>
+            <point key="canvasLocation" x="2904.375" y="304.22535211267603"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iXq-p0-YYe">
+            <objects>
+                <viewController id="cLS-SM-rcO" customClass="ViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vnz-wR-vxy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ag4-rT-ixZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mj1-2a-0zq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jm-JO-yVP">
+                                <rect key="frame" x="137" y="389" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="本追加"/>
+                                <connections>
+                                    <action selector="aa" destination="cLS-SM-rcO" eventType="touchUpInside" id="64q-Cz-Y9t"/>
+                                    <segue destination="B3M-4Y-hl7" kind="presentation" id="HqB-sL-tMq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3C-iF-XUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-56.25" y="-97.183098591549296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CVw-gE-3zk">
@@ -285,7 +147,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HwC-OR-vC9"/>
-        <segue reference="aBQ-fe-FGP"/>
+        <segue reference="dPf-Zu-Nqk"/>
     </inferredMetricsTieBreakers>
 </document>
