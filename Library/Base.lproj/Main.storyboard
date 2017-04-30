@@ -34,7 +34,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ジャンル" id="QY6-ed-UYS">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="pV2-GU-gS0"/>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="pV2-GU-gS0">
+                            <connections>
+                                <segue destination="a8a-Pc-Cem" kind="unwind" unwindAction="backToTopWithSegue:" id="czD-Qd-VaG"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="x95-G3-85x">
                                 <connections>
@@ -46,6 +50,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYN-uW-Iml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="a8a-Pc-Cem" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1403" y="-97"/>
         </scene>
@@ -79,7 +84,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="ジャンル" id="90G-dD-xwx">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="m2R-tq-hJJ"/>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="m2R-tq-hJJ">
+                            <connections>
+                                <segue destination="g4N-0G-hh3" kind="unwind" unwindAction="backToGenreListWithSegue:" id="27c-ak-k3L"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="aFi-rF-nBX">
                             <connections>
                                 <action selector="saveGenre" destination="eK8-E7-GHI" id="k1u-uC-hYg"/>
@@ -91,6 +100,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iet-Fp-h55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="g4N-0G-hh3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2368" y="-97"/>
         </scene>

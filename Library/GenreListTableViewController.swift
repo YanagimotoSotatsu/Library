@@ -59,6 +59,11 @@ class GenreListTableViewController: UITableViewController {
         return cellGenre
         
     }
-       
+    
+    @IBAction func backToGenreList(segue: UIStoryboardSegue){
+        
+    }
+
+          
 
 }
