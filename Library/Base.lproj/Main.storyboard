@@ -104,7 +104,7 @@
                     <navigationItem key="navigationItem" title="Title" id="qHx-3G-MjM">
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="YW3-HG-BU5">
                             <connections>
-                                <segue destination="bFy-s6-iur" kind="unwind" unwindAction="backToBookListWithSegue:" id="vtg-0g-a2Q"/>
+                                <segue destination="bFy-s6-iur" kind="unwind" unwindAction="backToBookListWithSegue:" id="v9m-mY-wWV"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Opt-4k-JEW"/>

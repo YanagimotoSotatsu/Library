@@ -10,36 +10,59 @@ import UIKit
 
 class BookListTableViewController: UITableViewController {
 
+    var bookDictionary: [Dictionary<String, String>] = []
+    let bookSaveData = UserDefaults.standard
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if bookSaveData.array(forKey: "book") != nil{
+            bookDictionary = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
+        }
+        tableView.reloadData()
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        //        // #warning Incomplete implementation, return the number of rows
+        return bookDictionary.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cellGenre = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            as! GenreTableViewCell
+        let nowIndexPathDictionary = genreArray[indexPath.row]
+        
+        cellGenre.genreLabel.text = nowIndexPathDictionary["ジャンル"]
+        
+        return cellGenre
+        
     }
     
     @IBAction func backToBookList(segue: UIStoryboardSegue){
         
     }
-
+    
 
   }
