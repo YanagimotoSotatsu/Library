@@ -14,11 +14,9 @@ class EdidBookCollectionViewController: UICollectionViewController {
 
     @IBOutlet var bookTextField: UITextField!
     var bookDictionary: [Dictionary<String, String>] = []
-    var bookArray: [String] = []
-    var keyArray: [String] = []
+    var keyName: Array<String> = []
     var key = UserDefaults.standard
-    
-    let bookSaveData = UserDefaults.standard
+    var bookSaveData = UserDefaults.standard
     
     
     
@@ -38,9 +36,9 @@ class EdidBookCollectionViewController: UICollectionViewController {
     }
     
     @IBAction func saveBook(){
-        
-        bookArray.append(bookTextField.text!)
-        bookDictionary.set(bookArray, forkey: keyArray[])
+        let bookTitle: String = bookTextField.text!
+        keyName = key.stringArray(forKey: "key")!
+        bookDictionary[keyName[0]] = bookTitle
         bookSaveData.set(bookDictionary, forKey: "book")
         
         
