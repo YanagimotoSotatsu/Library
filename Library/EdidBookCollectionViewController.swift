@@ -37,7 +37,7 @@ class EdidBookCollectionViewController: UICollectionViewController {
     
     @IBAction func saveBook(){
         let bookTitle: String = bookTextField.text!
-        keyName = key.stringArray(forKey: "key")!
+        keyName = key.array(forKey: "key") as! Array<String>
         bookDictionary[keyName[0]] = bookTitle
         bookSaveData.set(bookDictionary, forKey: "book")
         
