@@ -10,7 +10,7 @@ import UIKit
 
 class BookListTableViewController: UITableViewController {
 
-    var bookDictionary: [Dictionary<String, String>] = []
+    var bookArray: [Dictionary<String, String>] = []
     let bookSaveData = UserDefaults.standard
     
     
@@ -25,7 +25,7 @@ class BookListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         if bookSaveData.array(forKey: "book") != nil{
-            bookDictionary = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
+            bookArray = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
         }
         tableView.reloadData()
     }
@@ -46,17 +46,17 @@ class BookListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //        // #warning Incomplete implementation, return the number of rows
-        return bookDictionary.count
+        return bookArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cellGenre = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            as! GenreTableViewCell
-        let nowIndexPathDictionary = genreArray[indexPath.row]
+        let cellBook = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            as! BookTableViewCell
+        let nowIndexPathDictionary = bookArray[indexPath.row]
         
-        cellGenre.genreLabel.text = nowIndexPathDictionary["ジャンル"]
+        cellBook.bookLabel.text = nowIndexPathDictionary["book"]
         
-        return cellGenre
+        return cellBook
         
     }
     

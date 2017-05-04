@@ -9,6 +9,9 @@
 import UIKit
 
 class BookTableViewCell: UITableViewCell {
+    
+    @IBOutlet var bookLabel: UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()

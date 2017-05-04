@@ -36,11 +36,11 @@ class EditGenreViewController: UIViewController {
     
     @IBAction func saveGenre(){
         let genreDictionary = ["ジャンル": genreTextField.text!]
-        let a = genreTextField.text
+        let a = genreTextField.text!
 
         genreArray.append(genreDictionary)
         genreSaveData.set(genreArray, forKey: "genre")
-        keyArray.append(a!)
+        keyArray.append(a)
         key.set(keyArray, forKey: "key")
         
         
