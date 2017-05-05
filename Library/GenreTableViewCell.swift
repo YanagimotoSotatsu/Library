@@ -12,6 +12,7 @@ class GenreTableViewCell: UITableViewCell {
     
     @IBOutlet var genreLabel: UILabel!
     
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,6 @@ class GenreTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-  
+    
       
   }

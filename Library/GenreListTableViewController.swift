@@ -14,6 +14,7 @@ class GenreListTableViewController: UITableViewController {
     let genreSaveData = UserDefaults.standard
     
     
+    
 
 
     override func viewDidLoad() {
@@ -59,7 +60,12 @@ class GenreListTableViewController: UITableViewController {
         return cellGenre
         
     }
+    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+                    performSegue(withIdentifier: "toSubViewController",sender: nil)
+        
+    }
     
+        
     
     @IBAction func backToGenreList(segue: UIStoryboardSegue){
         
