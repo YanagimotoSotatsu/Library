@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" title="Book" id="rY1-Of-9vz">
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="tW0-mB-dU1">
                             <connections>
-                                <segue destination="KKY-wS-kIh" kind="unwind" unwindAction="backToGenreListWithSegue:" id="fws-hY-A2r"/>
+                                <segue destination="KKY-wS-kIh" kind="unwind" unwindAction="backToTopWithSegue:" id="sNM-4z-y3u"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -57,7 +57,7 @@
         <!--Title-->
         <scene sceneID="KT8-Sk-l3U">
             <objects>
-                <viewController id="MVz-Hr-Fyw" customClass="EdidBookCollectionViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MVz-Hr-Fyw" customClass="EdidBookViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GxJ-Dc-zvr"/>
                         <viewControllerLayoutGuide type="bottom" id="Gxp-iW-2n0"/>
@@ -107,8 +107,15 @@
                                 <segue destination="bFy-s6-iur" kind="unwind" unwindAction="backToBookListWithSegue:" id="v9m-mY-wWV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Opt-4k-JEW"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Opt-4k-JEW">
+                            <connections>
+                                <action selector="saveBook" destination="MVz-Hr-Fyw" id="W4r-zZ-GGn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bookTextField" destination="EVF-hp-dEL" id="5hT-da-rdO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6Q-1D-BeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bFy-s6-iur" userLabel="Exit" sceneMemberID="exit"/>
@@ -131,9 +138,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="UrV-IH-gPb" kind="show" identifier="toBookList" id="lBA-9B-hJL"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -229,7 +233,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="本追加"/>
                                 <connections>
-                                    <segue destination="B3M-4Y-hl7" kind="presentation" id="QOa-pf-IVK"/>
+                                    <segue destination="UrV-IH-gPb" kind="presentation" id="xkd-fk-OAw"/>
                                 </connections>
                             </button>
                         </subviews>

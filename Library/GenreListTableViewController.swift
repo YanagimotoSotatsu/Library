@@ -60,12 +60,18 @@ class GenreListTableViewController: UITableViewController {
         return cellGenre
         
     }
-    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-                    performSegue(withIdentifier: "toSubViewController",sender: nil)
-        
-    }
+//    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+//        
+//        performSegue(withIdentifier: "toBookList",sender: nil)
+//    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+//        if (segue.identifier == "toBookList") {
+//            let _: BookListTableViewController = (segue.destination as? BookListTableViewController)!
+//            
+//        }
+//    }
+
     
-        
     
     @IBAction func backToGenreList(segue: UIStoryboardSegue){
         

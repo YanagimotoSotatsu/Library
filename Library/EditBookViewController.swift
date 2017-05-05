@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class EdidBookCollectionViewController: UICollectionViewController {
+class EdidBookViewController: UIViewController {
 
     @IBOutlet var bookTextField: UITextField!
     var bookArray: [Dictionary<String, String>] = []

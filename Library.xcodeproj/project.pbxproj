@@ -21,7 +21,7 @@
 		DDC7AF181EB64A3800476ED6 /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */; };
 		DDC7AF1B1EB64A4D00476ED6 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */; };
 		DDC7AF1C1EB64A4D00476ED6 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */; };
-		DDC7AF1E1EB64A6E00476ED6 /* EdidBookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF1D1EB64A6E00476ED6 /* EdidBookCollectionViewController.swift */; };
+		DDC7AF1E1EB64A6E00476ED6 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF1D1EB64A6E00476ED6 /* EditBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
 		DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
-		DDC7AF1D1EB64A6E00476ED6 /* EdidBookCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdidBookCollectionViewController.swift; sourceTree = "<group>"; };
+		DDC7AF1D1EB64A6E00476ED6 /* EditBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 				DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */,
 				DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */,
 				DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */,
-				DDC7AF1D1EB64A6E00476ED6 /* EdidBookCollectionViewController.swift */,
+				DDC7AF1D1EB64A6E00476ED6 /* EditBookViewController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 				DDC7AF181EB64A3800476ED6 /* BookListTableViewController.swift in Sources */,
 				DDC7AF1B1EB64A4D00476ED6 /* BookTableViewCell.swift in Sources */,
 				DD6CE4351EAB47CA007BB91F /* AppDelegate.swift in Sources */,
-				DDC7AF1E1EB64A6E00476ED6 /* EdidBookCollectionViewController.swift in Sources */,
+				DDC7AF1E1EB64A6E00476ED6 /* EditBookViewController.swift in Sources */,
 				DD6CE46C1EAEF407007BB91F /* GenreTableViewCell.swift in Sources */,
 				DD6CE4711EAEF45A007BB91F /* EditGenreViewController.swift in Sources */,
 			);
