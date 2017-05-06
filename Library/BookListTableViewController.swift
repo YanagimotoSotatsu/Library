@@ -10,7 +10,7 @@ import UIKit
 
 class BookListTableViewController: UITableViewController {
 
-    var bookArray: [Dictionary<String, String>] = []
+    var bookArray: [String] = []
     let bookSaveData = UserDefaults.standard
     var book: [Dictionary<String, String>] = []
     var keyArray: [String] = []
@@ -30,7 +30,7 @@ class BookListTableViewController: UITableViewController {
         keyArray = key.array(forKey: "key") as! Array<String>
         if bookSaveData.array(forKey: "book") != nil{
             book = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
-            bookArray = book [keyArray[0]]
+            bookArray = [book[keyArray[0]]]
         }
         tableView.reloadData()
     }
@@ -57,9 +57,10 @@ class BookListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cellBook = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             as! BookTableViewCell
-        let nowIndexPathDictionary = bookArray[indexPath.row]
+       
         
-        cellBook.bookLabel.text = nowIndexPathDictionary["book"]
+        cellBook.bookLabel.text = bookArray[indexPath.row]
+
         
         return cellBook
         
