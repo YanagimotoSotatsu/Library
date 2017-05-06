@@ -12,6 +12,9 @@ class BookListTableViewController: UITableViewController {
 
     var bookArray: [Dictionary<String, String>] = []
     let bookSaveData = UserDefaults.standard
+    var book: [Dictionary<String, String>] = []
+    var keyArray: [String] = []
+    var key = UserDefaults.standard
     
     
     
@@ -21,16 +24,18 @@ class BookListTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        keyArray = key.array(forKey: "key") as! Array<String>
         if bookSaveData.array(forKey: "book") != nil{
-            bookArray = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
+            book = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
+            bookArray = book [keyArray[0]]
         }
         tableView.reloadData()
     }
     
-    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,12 +48,12 @@ class BookListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
+//
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //        // #warning Incomplete implementation, return the number of rows
         return bookArray.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cellBook = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             as! BookTableViewCell

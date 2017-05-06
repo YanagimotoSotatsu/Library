@@ -233,7 +233,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="本追加"/>
                                 <connections>
-                                    <segue destination="UrV-IH-gPb" kind="presentation" id="xkd-fk-OAw"/>
+                                    <segue destination="UrV-IH-gPb" kind="presentation" id="U9I-pd-vvm"/>
                                 </connections>
                             </button>
                         </subviews>

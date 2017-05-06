@@ -21,9 +21,12 @@ class EdidBookViewController: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if bookSaveData.array(forKey: "book") != nil {
+            
             bookArray = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
         }
         
