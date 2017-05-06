@@ -138,6 +138,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="VoQ-Jb-O8S" kind="show" identifier="toBookList" id="XNk-3u-jbs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -233,7 +236,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="本追加"/>
                                 <connections>
-                                    <segue destination="UrV-IH-gPb" kind="presentation" id="U9I-pd-vvm"/>
+                                    <segue destination="B3M-4Y-hl7" kind="presentation" id="hes-gF-Xc0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -281,4 +284,7 @@
             <point key="canvasLocation" x="1381.875" y="-732.04225352112678"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XNk-3u-jbs"/>
+    </inferredMetricsTieBreakers>
 </document>
