@@ -58,15 +58,22 @@ class GenreListTableViewController: UITableViewController {
         return cellGenre
         
     }
-       func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        
-        let storyboard: UIStoryboard = self.storyboard!
-        let nextView = storyboard.instantiateViewController(withIdentifier: "BookList")
-        present(nextView, animated: true, completion: nil)
-        
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "BookList", sender: indexPath.row)
+
     }
-        
-    @IBAction func backToGenreList(segue: UIStoryboardSegue){
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "BookList"{
+        let controller = segue.destination as! BookListTableViewController
+        if let row = sender as? Int {
+            controller.row = row
+        }
+        }
+    }
+
+           @IBAction func backToGenreList(segue: UIStoryboardSegue){
         
     }
 

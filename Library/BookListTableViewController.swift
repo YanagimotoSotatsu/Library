@@ -15,6 +15,8 @@ class BookListTableViewController: UITableViewController {
     var bookDictionary: Dictionary<String, String> = [:]
     var keyArray: [String] = []
     var key = UserDefaults.standard
+    var row: Int!
+    var rowData = UserDefaults.standard
     
     
     
@@ -29,11 +31,14 @@ class BookListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         keyArray = key.array(forKey: "key") as! Array<String>
+        rowData.removeObject(forKey: "row")
+        rowData.set(row, forKey: "row")
         if bookSaveData.array(forKey: "book") != nil{
             bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
-            bookArray = [bookDictionary[keyArray[0]]]
+            bookArray = [bookDictionary[keyArray[row]]!]
         }
         tableView.reloadData()
+        
     }
     
 
@@ -66,6 +71,7 @@ class BookListTableViewController: UITableViewController {
         return cellBook
         
     }
+    
     
     @IBAction func backToBookList(segue: UIStoryboardSegue){
         

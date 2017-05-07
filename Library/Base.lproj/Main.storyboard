@@ -160,6 +160,9 @@
                             <barButtonItem title="削除" id="qmG-2p-xMj"/>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <segue destination="VoQ-Jb-O8S" kind="show" identifier="BookList" id="EaQ-fx-wmC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYN-uW-Iml" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="a8a-Pc-Cem" userLabel="Exit" sceneMemberID="exit"/>
@@ -233,7 +236,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="本追加"/>
                                 <connections>
-                                    <segue destination="UrV-IH-gPb" kind="presentation" id="JwW-ze-XQA"/>
+                                    <segue destination="B3M-4Y-hl7" kind="presentation" id="yy0-xQ-aeM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -281,4 +284,7 @@
             <point key="canvasLocation" x="1381.875" y="-732.04225352112678"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EaQ-fx-wmC"/>
+    </inferredMetricsTieBreakers>
 </document>
