@@ -12,9 +12,10 @@ class BookListTableViewController: UITableViewController {
 
     var bookArray: [String] = []
     let bookSaveData = UserDefaults.standard
-    var book: [Dictionary<String, String>] = []
+    var book: Dictionary<String, String> = [:]
     var keyArray: [String] = []
     var key = UserDefaults.standard
+    
     
     
     
@@ -29,8 +30,8 @@ class BookListTableViewController: UITableViewController {
         super.viewWillAppear(true)
         keyArray = key.array(forKey: "key") as! Array<String>
         if bookSaveData.array(forKey: "book") != nil{
-            book = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
-//            bookArray = [book[keyArray[0]]]
+            book = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
+            bookArray = [book[keyArray[0]]!]
         }
         tableView.reloadData()
     }

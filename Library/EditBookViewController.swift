@@ -13,9 +13,9 @@ private let reuseIdentifier = "Cell"
 class EdidBookViewController: UIViewController {
 
     @IBOutlet var bookTextField: UITextField!
-    var bookArray: [Dictionary<String, String>] = []
-    var keyName: Array<String> = []
-    var key = UserDefaults.standard
+    var bookArray: Dictionary<String, String> = [:]
+    var genreArray: [String] = []
+    var genre = UserDefaults.standard
     var bookSaveData = UserDefaults.standard
     
     
@@ -27,7 +27,7 @@ class EdidBookViewController: UIViewController {
         
         if bookSaveData.array(forKey: "book") != nil {
             
-            bookArray = bookSaveData.array(forKey: "book") as! [Dictionary<String, String>]
+            bookArray = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
         }
         
     }
@@ -40,10 +40,9 @@ class EdidBookViewController: UIViewController {
     }
     
     @IBAction func saveBook(){
-        keyName = key.array(forKey: "key") as! Array<String>
+        genreArray = genre.array(forKey: "genre") as! [String]
 
-        let bookDictionary = [keyName[0] : bookTextField.text!]
-        bookArray.append(bookDictionary)
+        bookArray[genreArray[0]] = bookTextField.text!
         bookSaveData.set(bookArray, forKey: "book")
         
         

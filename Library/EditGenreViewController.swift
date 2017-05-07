@@ -11,9 +11,8 @@ import UIKit
 class EditGenreViewController: UIViewController {
     
     @IBOutlet var genreTextField: UITextField!
-    var genreArray: [Dictionary<String, String>] = []
-    var keyArray: [String] = []
-    var key = UserDefaults.standard
+    var genreArray: [String] = []
+    var genre = UserDefaults.standard
     
     let genreSaveData = UserDefaults.standard
     
@@ -22,7 +21,7 @@ class EditGenreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if genreSaveData.array(forKey: "genre") != nil {
-            genreArray = genreSaveData.array(forKey: "genre") as! [Dictionary<String, String>]
+            genreArray = genreSaveData.array(forKey: "genre") as! [String]
         }
         
     }
@@ -35,13 +34,9 @@ class EditGenreViewController: UIViewController {
     }
     
     @IBAction func saveGenre(){
-        let genreDictionary = ["ジャンル": genreTextField.text!]
-        let a = genreTextField.text!
 
-        genreArray.append(genreDictionary)
+        genreArray.append(genreTextField.text!)
         genreSaveData.set(genreArray, forKey: "genre")
-        keyArray.append(a)
-        key.set(keyArray, forKey: "key")
         
         
         

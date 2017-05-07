@@ -10,7 +10,8 @@ import UIKit
 
 class GenreListTableViewController: UITableViewController {
     
-    var genreArray: [Dictionary<String, String>] = []
+    var genreArray: [String] = []
+    var genre = UserDefaults.standard
     let genreSaveData = UserDefaults.standard
     
     
@@ -20,13 +21,14 @@ class GenreListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "GenreTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if genreSaveData.array(forKey: "genre") != nil{
-            genreArray = genreSaveData.array(forKey: "genre") as! [Dictionary<String, String>]
+        if genreSaveData.array(forKey: "genre") != nil {
+            genreArray = genreSaveData.array(forKey: "genre") as! [String]
         }
         tableView.reloadData()
     }
@@ -53,9 +55,9 @@ class GenreListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cellGenre = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             as! GenreTableViewCell
-        let nowIndexPathDictionary = genreArray[indexPath.row]
         
-        cellGenre.genreLabel.text = nowIndexPathDictionary["ジャンル"]
+        
+        cellGenre.genreLabel.text = genreArray[indexPath.row]
         
         return cellGenre
         
