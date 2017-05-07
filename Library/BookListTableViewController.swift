@@ -35,7 +35,7 @@ class BookListTableViewController: UITableViewController {
         rowData.set(row, forKey: "row")
         if bookSaveData.array(forKey: "book") != nil{
             bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
-            bookArray = [bookDictionary[keyArray[row]]!]
+          bookArray = [bookDictionary[keyArray[row]]!]
         }
         tableView.reloadData()
         
@@ -71,6 +71,13 @@ class BookListTableViewController: UITableViewController {
         return cellBook
         
     }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            bookArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+
     
     
     @IBAction func backToBookList(segue: UIStoryboardSegue){

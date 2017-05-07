@@ -61,6 +61,7 @@ class GenreListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "BookList", sender: indexPath.row)
+        
 
     }
     
@@ -72,7 +73,14 @@ class GenreListTableViewController: UITableViewController {
         }
         }
     }
-
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            genreArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    
            @IBAction func backToGenreList(segue: UIStoryboardSegue){
         
     }
