@@ -13,11 +13,7 @@ class GenreListTableViewController: UITableViewController {
     var genreArray: [String] = []
     var genre = UserDefaults.standard
     let genreSaveData = UserDefaults.standard
-    
-    
-    
-
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "GenreTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -62,20 +58,14 @@ class GenreListTableViewController: UITableViewController {
         return cellGenre
         
     }
-   
-    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+       func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        performSegue(withIdentifier: "toBookList",sender: nil)
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewController(withIdentifier: "BookList")
+        present(nextView, animated: true, completion: nil)
+        
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "toBookList") {
-            let _: BookListTableViewController = (segue.destination as? BookListTableViewController)!
-            
-        }
-    }
-
-    
-    
+        
     @IBAction func backToGenreList(segue: UIStoryboardSegue){
         
     }
