@@ -11,6 +11,7 @@ import UIKit
 class BookTableViewCell: UITableViewCell {
     
     @IBOutlet var bookLabel: UILabel!
+    @IBOutlet var comentLabel: UILabel!
 
 
     override func awakeFromNib() {

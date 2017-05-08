@@ -115,6 +115,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bookTextField" destination="EVF-hp-dEL" id="5hT-da-rdO"/>
+                        <outlet property="comentTextField" destination="LgJ-d4-aIn" id="95j-06-O5y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6Q-1D-BeL" userLabel="First Responder" sceneMemberID="firstResponder"/>

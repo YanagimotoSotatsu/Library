@@ -11,8 +11,10 @@ import UIKit
 class BookListTableViewController: UITableViewController {
 
     var bookArray: [String] = []
+    var comentArray: [String] = []
     let bookSaveData = UserDefaults.standard
     var bookDictionary: Dictionary<String, String> = [:]
+    var comentDictionary: Dictionary<String, String> = [:]
     var keyArray: [String] = []
     var key = UserDefaults.standard
     var row: Int!
@@ -37,6 +39,11 @@ class BookListTableViewController: UITableViewController {
             bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
           bookArray = [bookDictionary[keyArray[row]]!]
         }
+        if bookSaveData.array(forKey: "coment") != nil{
+            comentDictionary = bookSaveData.dictionary(forKey: "coment") as! Dictionary<String, String>
+            comentArray = [comentDictionary[keyArray[row]]!]
+        }
+
         tableView.reloadData()
         
     }
@@ -66,6 +73,7 @@ class BookListTableViewController: UITableViewController {
        
         
         cellBook.bookLabel.text = bookArray[indexPath.row]
+        cellBook.comentLabel.text = comentArray[indexPath.row]
 
         
         return cellBook
@@ -74,6 +82,7 @@ class BookListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             bookArray.remove(at: indexPath.row)
+            comentArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
