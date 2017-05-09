@@ -20,10 +20,6 @@ class BookListTableViewController: UITableViewController {
     var row: Int!
     var rowData = UserDefaults.standard
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -39,7 +35,7 @@ class BookListTableViewController: UITableViewController {
             bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
           bookArray = [bookDictionary[keyArray[row]]!]
         }
-        if bookSaveData.array(forKey: "coment") != nil{
+            if bookSaveData.array(forKey: "coment") != nil{
             comentDictionary = bookSaveData.dictionary(forKey: "coment") as! Dictionary<String, String>
             comentArray = [comentDictionary[keyArray[row]]!]
         }

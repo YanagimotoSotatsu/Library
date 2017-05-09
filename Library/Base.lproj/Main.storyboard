@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,14 +38,11 @@
                                 <segue destination="KKY-wS-kIh" kind="unwind" unwindAction="backToTopWithSegue:" id="sNM-4z-y3u"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" systemItem="add" id="wf4-EF-vzz">
-                                <connections>
-                                    <segue destination="MVz-Hr-Fyw" kind="show" id="vl3-cN-LUz"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="削除" id="Pap-wA-K1u"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="wf4-EF-vzz">
+                            <connections>
+                                <segue destination="MVz-Hr-Fyw" kind="show" id="vl3-cN-LUz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH3-5m-0If" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,14 +148,11 @@
                                 <segue destination="a8a-Pc-Cem" kind="unwind" unwindAction="backToTopWithSegue:" id="czD-Qd-VaG"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="x95-G3-85x">
-                                <connections>
-                                    <segue destination="eK8-E7-GHI" kind="show" id="G5q-QY-9Gl"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="削除" id="qmG-2p-xMj"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="x95-G3-85x">
+                            <connections>
+                                <segue destination="eK8-E7-GHI" kind="show" id="G5q-QY-9Gl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="VoQ-Jb-O8S" kind="show" identifier="BookList" id="EaQ-fx-wmC"/>
@@ -240,6 +233,13 @@
                                     <segue destination="B3M-4Y-hl7" kind="presentation" id="yy0-xQ-aeM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epg-32-xRg">
+                                <rect key="frame" x="139" y="178" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
