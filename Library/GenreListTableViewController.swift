@@ -65,7 +65,7 @@ class GenreListTableViewController: UITableViewController {
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?){
         if segue.identifier == "BookList"{
         let controller = segue.destination as! BookListTableViewController
         if let row = sender as? Int {
