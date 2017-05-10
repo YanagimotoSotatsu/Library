@@ -243,6 +243,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="epg-32-xRg" id="F3G-RU-078"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3C-iF-XUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

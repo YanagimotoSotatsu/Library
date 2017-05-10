@@ -9,15 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var numberLabel: UILabel!
+    var num: Int = 0
+    var bookSaveData = UserDefaults.standard
+    var bookDictonary: [String] = []
+    
+    
     
    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bookDictonary = bookSaveData.array(forKey: "genre") as! [String]
+        num = bookDictonary.count
+        
+        var num_st: String = String(num)
+        
 
-           
-    
+
+        numberLabel.text = num_st
     }
 
     override func didReceiveMemoryWarning() {
