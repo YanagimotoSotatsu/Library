@@ -26,6 +26,7 @@ class BookListTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        if bookSaveData.array(forKey: "key") != nil{
         keyArray = bookSaveData.array(forKey: "key") as! Array<String>
         bookSaveData.removeObject(forKey: "row")
         bookSaveData.set(row, forKey: "row")
@@ -39,6 +40,7 @@ class BookListTableViewController: UITableViewController {
             comentDictionary = bookSaveData.dictionary(forKey: "coment") as! Dictionary<String, String>
             comentArray = [comentDictionary[keyArray[row]]!]
 
+        }
         }
 
 

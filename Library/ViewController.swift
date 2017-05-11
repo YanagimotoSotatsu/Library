@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var numberLabel: UILabel!
     var num: Int = 0
     var bookSaveData = UserDefaults.standard
-    var bookDictonary: [String] = []
+    var bookDictonary: Dictionary<String, String> = [:]
     
     
     
@@ -21,16 +21,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if bookSaveData.array(forKey: "genre") != nil{
-        bookDictonary = bookSaveData.array(forKey: "genre") as! [String]
+        if bookSaveData.dictionary(forKey: "book") != nil{
+        bookDictonary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
         }
         num = bookDictonary.count
         let num_st: String = String(num)
          numberLabel.text = num_st
     }
     override func viewDidAppear(_ animated: Bool) {
-        if bookSaveData.array(forKey: "genre") != nil{
-            bookDictonary = bookSaveData.array(forKey: "genre") as! [String]
+        if bookSaveData.array(forKey: "book") != nil{
+            bookDictonary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
         }
         num = bookDictonary.count
         let num_st: String = String(num)

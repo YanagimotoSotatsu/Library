@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" title="Book" id="rY1-Of-9vz">
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="tW0-mB-dU1">
                             <connections>
-                                <segue destination="KKY-wS-kIh" kind="unwind" unwindAction="backToTopWithSegue:" id="sNM-4z-y3u"/>
+                                <segue destination="KKY-wS-kIh" kind="unwind" unwindAction="backToGenreListWithSegue:" id="vLp-mT-R0k"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="wf4-EF-vzz">
@@ -100,7 +100,7 @@
                     <navigationItem key="navigationItem" title="Title" id="qHx-3G-MjM">
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="YW3-HG-BU5">
                             <connections>
-                                <segue destination="bFy-s6-iur" kind="unwind" unwindAction="backToBookListWithSegue:" id="v9m-mY-wWV"/>
+                                <segue destination="bFy-s6-iur" kind="unwind" unwindAction="backToBookListWithSegue:" id="4wU-wn-ozy"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="Opt-4k-JEW">
