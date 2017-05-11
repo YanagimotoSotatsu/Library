@@ -76,6 +76,7 @@ class GenreListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             genreArray.remove(at: indexPath.row)
+            genreSaveData.set(genreArray, forKey: "genre")
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

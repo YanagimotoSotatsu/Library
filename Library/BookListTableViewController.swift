@@ -16,9 +16,7 @@ class BookListTableViewController: UITableViewController {
     var bookDictionary: Dictionary<String, String> = [:]
     var comentDictionary: Dictionary<String, String> = [:]
     var keyArray: [String] = []
-    var key = UserDefaults.standard
     var row: Int!
-    var rowData = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +26,9 @@ class BookListTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        keyArray = key.array(forKey: "key") as! Array<String>
-        rowData.removeObject(forKey: "row")
-        rowData.set(row, forKey: "row")
+        keyArray = bookSaveData.array(forKey: "key") as! Array<String>
+        bookSaveData.removeObject(forKey: "row")
+        bookSaveData.set(row, forKey: "row")
         if bookSaveData.array(forKey: "book") != nil{
             bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
             bookArray = [bookDictionary[keyArray[row]]!]
@@ -77,8 +75,20 @@ class BookListTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            var i: Int
             bookArray.remove(at: indexPath.row)
+            bookDictionary[keyArray[row]] = nil
+            for i in 0..<bookArray.count{
+                bookDictionary[keyArray[row]] = bookArray[i]
+            }
             comentArray.remove(at: indexPath.row)
+            comentDictionary[keyArray[row]] = nil
+            for i in 0..<comentArray.count{
+                comentDictionary[keyArray[row]] = comentArray[i]
+            }
+            bookSaveData.set(bookDictionary, forKey: "book")
+            bookSaveData.set(comentDictionary, forKey: "coment")
+
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

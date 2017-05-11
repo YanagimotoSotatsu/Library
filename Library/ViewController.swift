@@ -21,14 +21,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bookDictonary = bookSaveData.array(forKey: "genre") as! [String]
-        num = bookDictonary.count
-        
-        var num_st: String = String(num)
-        
-
-
-        numberLabel.text = num_st
+//        bookDictonary = bookSaveData.array(forKey: "genre") as! [String]
+//        num = bookDictonary.count
+//        
+//        let numa: String = String(num)
+//         numberLabel.text = numa
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +35,7 @@ class ViewController: UIViewController {
     
     @IBAction func backToTop(segue: UIStoryboardSegue){
         
+
     }
 
 
