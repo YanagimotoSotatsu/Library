@@ -32,11 +32,15 @@ class BookListTableViewController: UITableViewController {
         if bookSaveData.array(forKey: "book") != nil{
             bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
             bookArray = [bookDictionary[keyArray[row]]!]
+
         }
+
             if bookSaveData.array(forKey: "coment") != nil{
             comentDictionary = bookSaveData.dictionary(forKey: "coment") as! Dictionary<String, String>
             comentArray = [comentDictionary[keyArray[row]]!]
+
         }
+
 
         tableView.reloadData()
         
