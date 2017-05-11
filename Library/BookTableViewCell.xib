@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10D-xN-tk3">
-                        <rect key="frame" x="19" y="31" width="285" height="74"/>
+                        <rect key="frame" x="18" y="40" width="285" height="74"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -35,6 +35,7 @@
                 </subviews>
                 <connections>
                     <outlet property="bookLabel" destination="L7A-AF-LDA" id="5n4-Cm-fIk"/>
+                    <outlet property="comentLabel" destination="10D-xN-tk3" id="PYF-eD-3MH"/>
                 </connections>
             </tableViewCellContentView>
             <connections>
