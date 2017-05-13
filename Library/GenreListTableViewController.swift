@@ -11,7 +11,6 @@ import UIKit
 class GenreListTableViewController: UITableViewController {
     
     var genreArray: [String] = []
-    var genre = UserDefaults.standard
     let genreSaveData = UserDefaults.standard
   
     override func viewDidLoad() {
@@ -82,7 +81,7 @@ class GenreListTableViewController: UITableViewController {
     }
     
     
-           @IBAction func backToGenreList(segue: UIStoryboardSegue){
+    @IBAction func backToGenreList(segue: UIStoryboardSegue){
         
     }
 

@@ -17,19 +17,15 @@ class EdidBookViewController: UIViewController {
     var bookDictionary: Dictionary<String, String> = [:]
     var comentDictionary: Dictionary<String, String> = [:]
     var genreArray: [String] = []
-    var genre = UserDefaults.standard
     var bookSaveData = UserDefaults.standard
-    var rowData = UserDefaults.standard
     var row: Int = 0
-    
-    
-    
-    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         if bookSaveData.array(forKey: "book") != nil {
             
             bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
@@ -39,28 +35,23 @@ class EdidBookViewController: UIViewController {
             comentDictionary = bookSaveData.dictionary(forKey: "coment") as! Dictionary<String, String>
         }
 
-        row = rowData.integer(forKey: "row")
         
     }
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     @IBAction func saveBook(){
-        genreArray = genre.array(forKey: "genre") as! [String]
+        genreArray = bookSaveData.array(forKey: "genre") as! [String]
+        row = bookSaveData.integer(forKey: "row")
 
+        
         bookDictionary[genreArray[row]] = bookTextField.text!
         comentDictionary[genreArray[row]] = comentTextField.text!
         bookSaveData.set(bookDictionary, forKey: "book")
         bookSaveData.set(comentDictionary, forKey: "coment")
 
-        
-        
-        
         let alert = UIAlertController(
             title: "保存完了",
             message: "保存が完了しました",

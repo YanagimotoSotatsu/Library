@@ -12,7 +12,6 @@ class EditGenreViewController: UIViewController {
     
     @IBOutlet var genreTextField: UITextField!
     var genreArray: [String] = []
-    var genre = UserDefaults.standard
     
     let genreSaveData = UserDefaults.standard
     
