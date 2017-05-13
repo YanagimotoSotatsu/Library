@@ -9,7 +9,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Book-->
+        <!--コメント-->
+        <scene sceneID="VAd-AN-d95">
+            <objects>
+                <viewController storyboardIdentifier="coment" id="0fV-vV-iS3" customClass="ComentViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yFW-vf-X07"/>
+                        <viewControllerLayoutGuide type="bottom" id="EnR-Kh-5W2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UeL-Vh-w0m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kak-6c-DUn">
+                                <rect key="frame" x="16" y="107" width="288" height="441"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MID-ye-qoz">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="コメント" id="t9u-KJ-dln">
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="yzl-Td-u6K">
+                            <connections>
+                                <segue destination="BHM-gr-VaA" kind="unwind" unwindAction="backToBookListWithSegue:" id="f3i-qy-MIV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="comentLabel" destination="Kak-6c-DUn" id="neA-Gd-6Rk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZ7-m7-JXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BHM-gr-VaA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2373.75" y="-1432.3943661971832"/>
+        </scene>
+        <!--Book List Table View Controller-->
         <scene sceneID="ubn-P4-x8G">
             <objects>
                 <tableViewController storyboardIdentifier="BookList" id="VoQ-Jb-O8S" customClass="BookListTableViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +74,7 @@
                             <outlet property="delegate" destination="VoQ-Jb-O8S" id="1x3-Qu-92C"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Book" id="rY1-Of-9vz">
+                    <navigationItem key="navigationItem" id="rY1-Of-9vz">
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="tW0-mB-dU1">
                             <connections>
                                 <segue destination="KKY-wS-kIh" kind="unwind" unwindAction="backToGenreListWithSegue:" id="vLp-mT-R0k"/>
@@ -44,13 +86,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="0fV-vV-iS3" kind="show" id="zOw-99-O3r"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH3-5m-0If" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KKY-wS-kIh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2379.375" y="-732.04225352112678"/>
         </scene>
-        <!--Title-->
+        <!--タイトル/コメント-->
         <scene sceneID="KT8-Sk-l3U">
             <objects>
                 <viewController storyboardIdentifier="editBook" id="MVz-Hr-Fyw" customClass="EdidBookViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,38 +111,38 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDp-y0-FCw">
-                                <rect key="frame" x="79" y="116" width="70" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="コメント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbR-NH-6nO">
-                                <rect key="frame" x="79" y="190" width="70" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVF-hp-dEL">
-                                <rect key="frame" x="186" y="116" width="97" height="30"/>
+                                <rect key="frame" x="12" y="127" width="297" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LgJ-d4-aIn">
-                                <rect key="frame" x="186" y="190" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GYU-Xy-eTz">
+                                <rect key="frame" x="16" y="213" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHZ-bB-4YY">
+                                <rect key="frame" x="16" y="98" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="コメント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzC-6h-MhX">
+                                <rect key="frame" x="16" y="184" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="qHx-3G-MjM">
+                    <navigationItem key="navigationItem" title="タイトル/コメント" id="qHx-3G-MjM">
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="YW3-HG-BU5">
                             <connections>
                                 <segue destination="bFy-s6-iur" kind="unwind" unwindAction="backToBookListWithSegue:" id="4wU-wn-ozy"/>
@@ -111,13 +156,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bookTextField" destination="EVF-hp-dEL" id="5hT-da-rdO"/>
-                        <outlet property="comentTextField" destination="LgJ-d4-aIn" id="95j-06-O5y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6Q-1D-BeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bFy-s6-iur" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3368" y="-730"/>
+            <point key="canvasLocation" x="3367.5" y="-730.9859154929577"/>
         </scene>
         <!--ジャンル-->
         <scene sceneID="Fir-LS-aFX">
@@ -183,7 +227,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfH-0r-d1J">
-                                <rect key="frame" x="112" y="136" width="97" height="30"/>
+                                <rect key="frame" x="22" y="144" width="276" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -211,7 +255,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iet-Fp-h55" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="g4N-0G-hh3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3368" y="-64"/>
+            <point key="canvasLocation" x="3367.5" y="-64.436619718309856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iXq-p0-YYe">
@@ -226,17 +270,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jm-JO-yVP">
-                                <rect key="frame" x="137" y="389" width="46" height="30"/>
+                                <rect key="frame" x="128" y="214" width="65" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="本追加"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="貯本">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="B3M-4Y-hl7" kind="presentation" id="yy0-xQ-aeM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epg-32-xRg">
-                                <rect key="frame" x="139" y="178" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="貯本箱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykR-um-X1k">
+                                <rect key="frame" x="97" y="44" width="126" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epg-32-xRg">
+                                <rect key="frame" x="96" y="419" width="98" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="冊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oy3-SL-C6F">
+                                <rect key="frame" x="192" y="419" width="33" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -249,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3C-iF-XUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491" y="-285"/>
+            <point key="canvasLocation" x="489.375" y="-285.21126760563379"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CVw-gE-3zk">

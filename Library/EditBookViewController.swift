@@ -14,8 +14,8 @@ class EdidBookViewController: UIViewController {
 
     @IBOutlet var bookTextField: UITextField!
     @IBOutlet var comentTextField: UITextField!
-    var bookDictionary: Dictionary<String, String> = [:]
-    var comentDictionary: Dictionary<String, String> = [:]
+    var bookArray: [String] = []
+    var coment: String = ""
     var genreArray: [String] = []
     var bookSaveData = UserDefaults.standard
     var row: Int = 0
@@ -24,17 +24,16 @@ class EdidBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        row = bookSaveData.integer(forKey: "row")
 
-        if bookSaveData.array(forKey: "book") != nil {
-            
-            bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
-        }
-        if bookSaveData.array(forKey: "coment") != nil {
-            
-            comentDictionary = bookSaveData.dictionary(forKey: "coment") as! Dictionary<String, String>
+        if bookSaveData.array(forKey: "genre") != nil{
+            genreArray = bookSaveData.array(forKey: "genre") as! [String]
+            if bookSaveData.array(forKey: genreArray[row]) != nil {
+                bookArray = bookSaveData.array(forKey: genreArray[row]) as! [String]
         }
 
+            
+        }
         
     }
     
@@ -43,14 +42,12 @@ class EdidBookViewController: UIViewController {
     }
     
     @IBAction func saveBook(){
-        genreArray = bookSaveData.array(forKey: "genre") as! [String]
-        row = bookSaveData.integer(forKey: "row")
-
         
-        bookDictionary[genreArray[row]] = bookTextField.text!
-        comentDictionary[genreArray[row]] = comentTextField.text!
-        bookSaveData.set(bookDictionary, forKey: "book")
-        bookSaveData.set(comentDictionary, forKey: "coment")
+        bookArray.append (bookTextField.text!)
+        coment = comentTextField.text!
+        
+        bookSaveData.set(coment, forKey: bookTextField.text!)
+        bookSaveData.set(bookArray, forKey: genreArray[row])
 
         let alert = UIAlertController(
             title: "保存完了",
@@ -62,6 +59,7 @@ class EdidBookViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         bookTextField.text = ""
         comentTextField.text = ""
+        
         
     }
     

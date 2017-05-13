@@ -11,7 +11,8 @@ import UIKit
 class GenreListTableViewController: UITableViewController {
     
     var genreArray: [String] = []
-    let genreSaveData = UserDefaults.standard
+    var bookArray: [String] = []
+    let bookSaveData = UserDefaults.standard
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,8 @@ class GenreListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if genreSaveData.array(forKey: "genre") != nil {
-            genreArray = genreSaveData.array(forKey: "genre") as! [String]
+        if bookSaveData.array(forKey: "genre") != nil {
+            genreArray = bookSaveData.array(forKey: "genre") as! [String]
         }
         tableView.reloadData()
     }
@@ -74,8 +75,15 @@ class GenreListTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            if bookSaveData.array(forKey: genreArray[indexPath.row]) != nil{
+                bookArray = bookSaveData.array(forKey: genreArray[indexPath.row]) as! [String]
+            }
+            print(genreArray.count)
+            print(indexPath.row)
+            bookArray = []
+            bookSaveData.set(bookArray, forKey: genreArray[indexPath.row])
             genreArray.remove(at: indexPath.row)
-            genreSaveData.set(genreArray, forKey: "genre")
+            bookSaveData.set(genreArray, forKey: "genre")
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

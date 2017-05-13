@@ -11,7 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var numberLabel: UILabel!
     var bookSaveData = UserDefaults.standard
-    var bookDictonary: Dictionary<String, String> = [:]
+    var num: Int = 0
+    var num_st: String = ""
+    var genreArray: [String] = []
+    var bookArray: [String] = []
     
     
     
@@ -23,11 +26,22 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if bookSaveData.dictionary(forKey: "book") != nil{
-            bookDictonary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
+        var num: Int = 0
+        if bookSaveData.array(forKey: "genre") != nil{
+            genreArray = bookSaveData.array(forKey: "genre") as! [String]
+            for i in 0..<genreArray.count {
+                if  bookSaveData.array(forKey: genreArray[i]) != nil{
+                    bookArray = bookSaveData.array(forKey: genreArray[i]) as! [String]
+                }
+                num = num + bookArray.count
+             
+            }
+
         }
-        let num: String = String(bookDictonary.count)
-        numberLabel.text = num
+        
+        num_st = num.description
+        
+        numberLabel.text = num_st
         
     }
     

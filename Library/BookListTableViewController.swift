@@ -11,10 +11,7 @@ import UIKit
 class BookListTableViewController: UITableViewController {
     
     var bookArray: [String] = []
-    var comentArray: [String] = []
     let bookSaveData = UserDefaults.standard
-    var bookDictionary: Dictionary<String, String> = [:]
-    var comentDictionary: Dictionary<String, String> = [:]
     var genreArray: [String] = []
     var row: Int!
     
@@ -31,21 +28,14 @@ class BookListTableViewController: UITableViewController {
         
         if bookSaveData.array(forKey: "genre") != nil{
             genreArray = bookSaveData.array(forKey: "genre") as! Array<String>
-            if bookSaveData.dictionary(forKey: "book") != nil{
-                bookDictionary = bookSaveData.dictionary(forKey: "book") as! Dictionary<String, String>
-                bookArray = [bookDictionary[genreArray[row]]!]
-                
-            }
-            
-            if bookSaveData.dictionary(forKey: "coment") != nil{
-                comentDictionary = bookSaveData.dictionary(forKey: "coment") as! Dictionary<String, String>
-                comentArray = [comentDictionary[genreArray[row]]!]
+            if bookSaveData.array(forKey: genreArray[row]) != nil{
+                bookArray = bookSaveData.array(forKey: genreArray[row]) as! Array<String>
                 
             }
         }
-        print(genreArray.count)
-        print(row)
-        
+        self.title = genreArray[row]
+
+       
         tableView.reloadData()
         
     }
@@ -75,7 +65,6 @@ class BookListTableViewController: UITableViewController {
         
         
         cellBook.bookLabel.text = bookArray[indexPath.row]
-        cellBook.comentLabel.text = comentArray[indexPath.row]
         
         
         return cellBook
@@ -86,21 +75,26 @@ class BookListTableViewController: UITableViewController {
         if editingStyle == .delete {
             
             bookArray.remove(at: indexPath.row)
-            bookDictionary[genreArray[row]] = nil
-            for i in 0..<bookArray.count{
-                bookDictionary[genreArray[row]] = bookArray[i]
-            }
-            comentArray.remove(at: indexPath.row)
-            comentDictionary[genreArray[row]] = nil
-            for i in 0..<comentArray.count{
-                comentDictionary[genreArray[row]] = comentArray[i]
-            }
-            bookSaveData.set(bookDictionary, forKey: "book")
-            bookSaveData.set(comentDictionary, forKey: "coment")
-            
+            bookSaveData.set(bookArray, forKey: genreArray[row])
+                     
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "coment", sender: indexPath.row)
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?){
+        if segue.identifier == "coment"{
+            let controller = segue.destination as! ComentViewController
+            if let bookName = sender as? Int {
+                controller.bookName = bookName
+            }
+        }
+    }
+
     
     
     
