@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DD0F8AA51EC8A84500543979 /* ComentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0F8AA41EC8A84500543979 /* ComentViewController.swift */; };
+		DD0F8AAA1EC8C2EE00543979 /* アセット 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0F8AA71EC8C2EE00543979 /* アセット 2.png */; };
+		DD0F8AAB1EC8C2EE00543979 /* アセット 3.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0F8AA81EC8C2EE00543979 /* アセット 3.png */; };
+		DD0F8AAD1EC8C4CA00543979 /* アセット 4.png in Resources */ = {isa = PBXBuildFile; fileRef = DD0F8AAC1EC8C4CA00543979 /* アセット 4.png */; };
 		DD6CE4351EAB47CA007BB91F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4341EAB47CA007BB91F /* AppDelegate.swift */; };
 		DD6CE4371EAB47CA007BB91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4361EAB47CA007BB91F /* ViewController.swift */; };
 		DD6CE43A1EAB47CA007BB91F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE4381EAB47CA007BB91F /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 
 /* Begin PBXFileReference section */
 		DD0F8AA41EC8A84500543979 /* ComentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComentViewController.swift; sourceTree = "<group>"; };
+		DD0F8AA71EC8C2EE00543979 /* アセット 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アセット 2.png"; sourceTree = "<group>"; };
+		DD0F8AA81EC8C2EE00543979 /* アセット 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アセット 3.png"; sourceTree = "<group>"; };
+		DD0F8AAC1EC8C4CA00543979 /* アセット 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アセット 4.png"; sourceTree = "<group>"; };
 		DD6CE4311EAB47CA007BB91F /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6CE4341EAB47CA007BB91F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD6CE4361EAB47CA007BB91F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,9 @@
 		DD6CE4331EAB47CA007BB91F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DD0F8AAC1EC8C4CA00543979 /* アセット 4.png */,
+				DD0F8AA71EC8C2EE00543979 /* アセット 2.png */,
+				DD0F8AA81EC8C2EE00543979 /* アセット 3.png */,
 				DD6CE4341EAB47CA007BB91F /* AppDelegate.swift */,
 				DD6CE4361EAB47CA007BB91F /* ViewController.swift */,
 				DD6CE4381EAB47CA007BB91F /* Main.storyboard */,
@@ -259,7 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0F8AAB1EC8C2EE00543979 /* アセット 3.png in Resources */,
+				DD0F8AAD1EC8C4CA00543979 /* アセット 4.png in Resources */,
 				DD6CE43F1EAB47CA007BB91F /* LaunchScreen.storyboard in Resources */,
+				DD0F8AAA1EC8C2EE00543979 /* アセット 2.png in Resources */,
 				DD6CE43C1EAB47CA007BB91F /* Assets.xcassets in Resources */,
 				DD6CE46D1EAEF407007BB91F /* GenreTableViewCell.xib in Resources */,
 				DD6CE43A1EAB47CA007BB91F /* Main.storyboard in Resources */,
