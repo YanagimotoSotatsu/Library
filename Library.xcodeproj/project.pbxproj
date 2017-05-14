@@ -22,7 +22,6 @@
 		DDC7AF1B1EB64A4D00476ED6 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */; };
 		DDC7AF1C1EB64A4D00476ED6 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */; };
 		DDC7AF1E1EB64A6E00476ED6 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF1D1EB64A6E00476ED6 /* EditBookViewController.swift */; };
-		DDC7AF241EC6ECDB00476ED6 /* ComentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF231EC6ECDB00476ED6 /* ComentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 		DDC7AF1D1EB64A6E00476ED6 /* EditBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditBookViewController.swift; sourceTree = "<group>"; };
-		DDC7AF231EC6ECDB00476ED6 /* ComentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +127,6 @@
 				DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */,
 				DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */,
 				DDC7AF1D1EB64A6E00476ED6 /* EditBookViewController.swift */,
-				DDC7AF231EC6ECDB00476ED6 /* ComentViewController.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -290,7 +287,6 @@
 			files = (
 				DD6CE4371EAB47CA007BB91F /* ViewController.swift in Sources */,
 				DD6CE4651EAB4CB3007BB91F /* GenreListTableViewController.swift in Sources */,
-				DDC7AF241EC6ECDB00476ED6 /* ComentViewController.swift in Sources */,
 				DDC7AF181EB64A3800476ED6 /* BookListTableViewController.swift in Sources */,
 				DDC7AF1B1EB64A4D00476ED6 /* BookTableViewCell.swift in Sources */,
 				DD6CE4351EAB47CA007BB91F /* AppDelegate.swift in Sources */,

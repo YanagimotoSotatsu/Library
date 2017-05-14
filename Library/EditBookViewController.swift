@@ -13,9 +13,7 @@ private let reuseIdentifier = "Cell"
 class EdidBookViewController: UIViewController {
 
     @IBOutlet var bookTextField: UITextField!
-    @IBOutlet var comentTextField: UITextField!
     var bookArray: [String] = []
-    var coment: String = ""
     var genreArray: [String] = []
     var bookSaveData = UserDefaults.standard
     var row: Int = 0
@@ -42,11 +40,9 @@ class EdidBookViewController: UIViewController {
     }
     
     @IBAction func saveBook(){
-        
+        if bookTextField.text! != ""{
+        if bookTextField.text != nil{
         bookArray.append (bookTextField.text!)
-        coment = comentTextField.text!
-        
-        bookSaveData.set(coment, forKey: bookTextField.text!)
         bookSaveData.set(bookArray, forKey: genreArray[row])
 
         let alert = UIAlertController(
@@ -58,9 +54,9 @@ class EdidBookViewController: UIViewController {
         ))
         self.present(alert, animated: true, completion: nil)
         bookTextField.text = ""
-        comentTextField.text = ""
         
-        
+    }
+    }
     }
     
     

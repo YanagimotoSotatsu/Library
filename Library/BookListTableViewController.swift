@@ -80,21 +80,7 @@ class BookListTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "coment", sender: indexPath.row)
-        
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?){
-        if segue.identifier == "coment"{
-            let controller = segue.destination as! ComentViewController
-            if let bookName = sender as? Int {
-                controller.bookName = bookName
-            }
-        }
-    }
-
+ 
     
     
     

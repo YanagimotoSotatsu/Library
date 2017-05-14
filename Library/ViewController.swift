@@ -29,15 +29,16 @@ class ViewController: UIViewController {
         var num: Int = 0
         if bookSaveData.array(forKey: "genre") != nil{
             genreArray = bookSaveData.array(forKey: "genre") as! [String]
-            for i in 0..<genreArray.count {
+        }
+            for i in 0..<genreArray.count  {
                 if  bookSaveData.array(forKey: genreArray[i]) != nil{
                     bookArray = bookSaveData.array(forKey: genreArray[i]) as! [String]
-                }
-                num = num + bookArray.count
-             
-            }
+                    num = num + bookArray.count
+                          }
+
 
         }
+        
         
         num_st = num.description
         

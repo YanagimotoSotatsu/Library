@@ -33,7 +33,7 @@ class EditGenreViewController: UIViewController {
     }
     
     @IBAction func saveGenre(){
-
+        if genreTextField.text! != ""{
         genreArray.append(genreTextField.text!)
         genreSaveData.set(genreArray, forKey: "genre")
         
@@ -49,6 +49,7 @@ class EditGenreViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         genreTextField.text = ""
         
+    }
     }
     
     
