@@ -33,7 +33,15 @@ class EditGenreViewController: UIViewController {
     }
     
     @IBAction func saveGenre(){
+        var judge: Int = 0
         if genreTextField.text! != ""{
+            for i in 0..<genreArray.count {
+                if genreTextField.text! == genreArray[i]{
+                    judge = 1
+                }
+            }
+            
+            if judge == 0{
         genreArray.append(genreTextField.text!)
         genreSaveData.set(genreArray, forKey: "genre")
         
@@ -48,7 +56,18 @@ class EditGenreViewController: UIViewController {
         ))
         self.present(alert, animated: true, completion: nil)
         genreTextField.text = ""
-        
+            }else{
+                let alert = UIAlertController(
+                    title: "すでにそのジャンルは保存されています",
+                    message: "",
+                    preferredStyle: .alert
+                )
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil
+                ))
+                self.present(alert, animated: true, completion: nil)
+
+                
+            }
     }
     }
     

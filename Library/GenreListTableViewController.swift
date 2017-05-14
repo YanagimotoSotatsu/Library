@@ -83,8 +83,6 @@ class GenreListTableViewController: UITableViewController {
             }
             
             bookSaveData.removeObject(forKey: genreArray[indexPath.row])
-//            bookArray = []
-//            bookSaveData.set(bookArray, forKey: genreArray[indexPath.row])
             genreArray.remove(at: indexPath.row)
             bookSaveData.set(genreArray, forKey: "genre")
             tableView.deleteRows(at: [indexPath], with: .fade)

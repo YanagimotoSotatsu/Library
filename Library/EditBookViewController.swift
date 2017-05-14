@@ -42,7 +42,19 @@ class EdidBookViewController: UIViewController {
     }
     
     @IBAction func saveBook(){
+        var judge: Int = 0
         if bookTextField.text! != ""{
+            for i in 0..<genreArray.count {
+                if bookSaveData.array(forKey: genreArray[i]) != nil{
+                    bookArray = bookSaveData.array(forKey: genreArray[i]) as! [String]
+                }
+                for t in 0..<bookArray.count{
+                if bookTextField.text! == bookArray[t]{
+                    judge = 1
+                }
+            }
+            }
+            if judge == 0{
         bookArray.append (bookTextField.text!)
         bookSaveData.set(bookArray, forKey: genreArray[row])
         coment = comentTextField.text!
@@ -58,7 +70,18 @@ class EdidBookViewController: UIViewController {
         bookTextField.text = ""
         comentTextField.text = ""
         
-    
+            }else{
+                let alert = UIAlertController(
+                    title: "すでにその本は保存されています",
+                    message: "",
+                    preferredStyle: .alert
+                )
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil
+                ))
+                self.present(alert, animated: true, completion: nil)
+
+                
+            }
     }
     }
     
