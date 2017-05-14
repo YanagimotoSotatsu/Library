@@ -14,7 +14,7 @@ class BookListTableViewController: UITableViewController {
     let bookSaveData = UserDefaults.standard
     var genreArray: [String] = []
     var row: Int!
-    
+    var coment: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -73,20 +73,39 @@ class BookListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
+            coment = bookSaveData.string(forKey: bookArray[indexPath.row])!
+            coment = ""
             bookArray.remove(at: indexPath.row)
             bookSaveData.set(bookArray, forKey: genreArray[row])
+            bookSaveData.removeObject(forKey: bookArray[indexPath.row])
+            
                      
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
- 
-    
-    
-    
-    @IBAction func backToBookList(segue: UIStoryboardSegue){
+        @IBAction func backToBookList(segue: UIStoryboardSegue){
         
     }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "coment", sender: indexPath.row)
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?){
+        if segue.identifier == "coment"{
+            let controller = segue.destination as! ComentViewController
+            if let row = sender as? Int {
+                controller.row = row
+            }
+        }
+    }
+
+    
+    
+    
     
     
 }

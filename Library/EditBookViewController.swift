@@ -13,8 +13,10 @@ private let reuseIdentifier = "Cell"
 class EdidBookViewController: UIViewController {
 
     @IBOutlet var bookTextField: UITextField!
+    @IBOutlet var comentTextField: UITextField!
     var bookArray: [String] = []
     var genreArray: [String] = []
+    var coment: String = ""
     var bookSaveData = UserDefaults.standard
     var row: Int = 0
 
@@ -41,10 +43,10 @@ class EdidBookViewController: UIViewController {
     
     @IBAction func saveBook(){
         if bookTextField.text! != ""{
-        if bookTextField.text != nil{
         bookArray.append (bookTextField.text!)
         bookSaveData.set(bookArray, forKey: genreArray[row])
-
+        coment = comentTextField.text!
+        bookSaveData.set(coment, forKey: bookTextField.text!)
         let alert = UIAlertController(
             title: "保存完了",
             message: "保存が完了しました",
@@ -54,8 +56,9 @@ class EdidBookViewController: UIViewController {
         ))
         self.present(alert, animated: true, completion: nil)
         bookTextField.text = ""
+        comentTextField.text = ""
         
-    }
+    
     }
     }
     

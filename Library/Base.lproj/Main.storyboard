@@ -9,6 +9,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Coment View Controller-->
+        <scene sceneID="F7E-6z-RwC">
+            <objects>
+                <viewController storyboardIdentifier="coment" id="8g5-dm-JlC" customClass="ComentViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Fe-Vq-fQk"/>
+                        <viewControllerLayoutGuide type="bottom" id="92Y-Uq-VDS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8UK-Od-IYC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npO-pF-cMY">
+                                <rect key="frame" x="16" y="103" width="281" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhb-Lt-vfy">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="2rp-ha-4om"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="comentLabel" destination="npO-pF-cMY" id="mOB-VE-wGQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJx-z2-f6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373.75" y="-1414.4366197183099"/>
+        </scene>
         <!--Book List Table View Controller-->
         <scene sceneID="ubn-P4-x8G">
             <objects>
@@ -44,13 +81,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="8g5-dm-JlC" kind="show" identifier="coment" id="Tvf-9X-XIS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH3-5m-0If" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KKY-wS-kIh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2379.375" y="-732.04225352112678"/>
         </scene>
-        <!--タイトル-->
+        <!--タイトル/コメント-->
         <scene sceneID="KT8-Sk-l3U">
             <objects>
                 <viewController storyboardIdentifier="editBook" id="MVz-Hr-Fyw" customClass="EdidBookViewController" customModule="Library" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,10 +120,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="コメント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHZ-ZU-Y6U">
+                                <rect key="frame" x="16" y="179" width="70" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gC3-qs-GeY">
+                                <rect key="frame" x="14" y="215" width="293" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="タイトル" id="qHx-3G-MjM">
+                    <navigationItem key="navigationItem" title="タイトル/コメント" id="qHx-3G-MjM">
                         <barButtonItem key="leftBarButtonItem" title="もどる" id="YW3-HG-BU5">
                             <connections>
                                 <segue destination="bFy-s6-iur" kind="unwind" unwindAction="backToBookListWithSegue:" id="4wU-wn-ozy"/>
@@ -97,6 +151,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bookTextField" destination="EVF-hp-dEL" id="5hT-da-rdO"/>
+                        <outlet property="comentTextField" destination="gC3-qs-GeY" id="7kU-Pa-eBF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6Q-1D-BeL" userLabel="First Responder" sceneMemberID="firstResponder"/>

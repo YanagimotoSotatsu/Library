@@ -78,10 +78,13 @@ class GenreListTableViewController: UITableViewController {
             if bookSaveData.array(forKey: genreArray[indexPath.row]) != nil{
                 bookArray = bookSaveData.array(forKey: genreArray[indexPath.row]) as! [String]
             }
-            print(genreArray.count)
-            print(indexPath.row)
-            bookArray = []
-            bookSaveData.set(bookArray, forKey: genreArray[indexPath.row])
+            for i in 0..<bookArray.count{
+                bookSaveData.removeObject(forKey: bookArray[i])
+            }
+            
+            bookSaveData.removeObject(forKey: genreArray[indexPath.row])
+//            bookArray = []
+//            bookSaveData.set(bookArray, forKey: genreArray[indexPath.row])
             genreArray.remove(at: indexPath.row)
             bookSaveData.set(genreArray, forKey: "genre")
             tableView.deleteRows(at: [indexPath], with: .fade)
