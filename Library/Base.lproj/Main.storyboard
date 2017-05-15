@@ -284,7 +284,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="アセット 5 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2X4-lX-E8V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="アセット 1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2X4-lX-E8V">
                                 <rect key="frame" x="8" y="-2" width="305" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -320,7 +320,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="numberLabel" destination="epg-32-xRg" id="F3G-RU-078"/>
@@ -369,9 +369,9 @@
     </scenes>
     <resources>
         <image name="img.png" width="282" height="372"/>
+        <image name="アセット 1.png" width="415" height="129"/>
         <image name="アセット 2.png" width="301" height="256"/>
         <image name="アセット 4.png" width="195" height="243"/>
-        <image name="アセット 5 1.png" width="335" height="113"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EaQ-fx-wmC"/>
