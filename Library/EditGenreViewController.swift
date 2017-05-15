@@ -34,7 +34,7 @@ class EditGenreViewController: UIViewController {
     
     @IBAction func saveGenre(){
         var judge: Int = 0
-        if genreTextField.text! != ""{
+        if genreTextField.text != nil{
             for i in 0..<genreArray.count {
                 if genreTextField.text! == genreArray[i]{
                     judge = 1

@@ -15,6 +15,7 @@ class EdidBookViewController: UIViewController {
     @IBOutlet var bookTextField: UITextField!
     @IBOutlet var comentTextField: UITextField!
     var bookArray: [String] = []
+    var nameArray: [String] = []
     var genreArray: [String] = []
     var coment: String = ""
     var bookSaveData = UserDefaults.standard
@@ -28,12 +29,11 @@ class EdidBookViewController: UIViewController {
 
         if bookSaveData.array(forKey: "genre") != nil{
             genreArray = bookSaveData.array(forKey: "genre") as! [String]
-            if bookSaveData.array(forKey: genreArray[row]) != nil {
-                bookArray = bookSaveData.array(forKey: genreArray[row]) as! [String]
+           
         }
 
             
-        }
+        
         
     }
     
@@ -43,7 +43,7 @@ class EdidBookViewController: UIViewController {
     
     @IBAction func saveBook(){
         var judge: Int = 0
-        if bookTextField.text! != ""{
+        if bookTextField.text != nil{
             for i in 0..<genreArray.count {
                 if bookSaveData.array(forKey: genreArray[i]) != nil{
                     bookArray = bookSaveData.array(forKey: genreArray[i]) as! [String]
@@ -55,9 +55,16 @@ class EdidBookViewController: UIViewController {
             }
             }
             if judge == 0{
-        bookArray.append (bookTextField.text!)
-        bookSaveData.set(bookArray, forKey: genreArray[row])
-        coment = comentTextField.text!
+                if bookSaveData.array(forKey: genreArray[row]) != nil{
+        nameArray = bookSaveData.array(forKey: genreArray[row]) as! [String]
+                }else{
+                    bookSaveData.set(nameArray, forKey: genreArray[row])
+                }
+        nameArray.append (bookTextField.text!)
+        bookSaveData.set(nameArray, forKey: genreArray[row])
+        if comentTextField.text != nil{
+                coment = comentTextField.text!
+                }
         bookSaveData.set(coment, forKey: bookTextField.text!)
         let alert = UIAlertController(
             title: "保存完了",

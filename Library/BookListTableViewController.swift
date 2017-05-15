@@ -73,11 +73,10 @@ class BookListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            coment = bookSaveData.string(forKey: bookArray[indexPath.row])!
-            coment = ""
+            
+            bookSaveData.removeObject(forKey: bookArray[indexPath.row])
             bookArray.remove(at: indexPath.row)
             bookSaveData.set(bookArray, forKey: genreArray[row])
-            bookSaveData.removeObject(forKey: bookArray[indexPath.row])
             
                      
             tableView.deleteRows(at: [indexPath], with: .fade)
