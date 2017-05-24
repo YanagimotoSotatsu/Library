@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class EdidBookViewController: UIViewController {
+class EdidBookViewController: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
 
     @IBOutlet var bookTextField: UITextField!
     @IBOutlet var comentTextField: UITextField!
@@ -91,7 +91,19 @@ class EdidBookViewController: UIViewController {
             }
     }
     }
+    func presentPickerController(sourceType: UIImagePickerControllerSourceType){
+        if UIImagePickerController.isSourceTypeAvailable(sourceType){
+            let picker = UIImagePickerController()
+            picker.sourceType = sourceType
+            picker.delegate = self
+            self.present(picker,animated: true, completion: nil)
+        }
+    }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        self.dismiss(animated: true, completion: nil)
+        bookSaveData.set(info[UIImagePickerControllerOriginalImage], forkey: bookTextField.text!)
+        }
     
     
     

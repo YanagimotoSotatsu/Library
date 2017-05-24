@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComentViewController: UIViewController {
+class ComentViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate{
 
     var row: Int!
     var bookSaveData = UserDefaults.standard
@@ -17,6 +17,7 @@ class ComentViewController: UIViewController {
     var rowGenre: Int = 0
     var coment: String = ""
     @IBOutlet var comentLabel: UILabel!
+    @IBOutlet var photoImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
