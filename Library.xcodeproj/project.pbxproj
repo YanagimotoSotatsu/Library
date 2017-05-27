@@ -16,13 +16,18 @@
 		DD6CE4371EAB47CA007BB91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4361EAB47CA007BB91F /* ViewController.swift */; };
 		DD6CE43A1EAB47CA007BB91F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE4381EAB47CA007BB91F /* Main.storyboard */; };
 		DD6CE43C1EAB47CA007BB91F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE43B1EAB47CA007BB91F /* Assets.xcassets */; };
-		DD6CE43F1EAB47CA007BB91F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE43D1EAB47CA007BB91F /* LaunchScreen.storyboard */; };
 		DD6CE44A1EAB47CA007BB91F /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4491EAB47CA007BB91F /* LibraryTests.swift */; };
 		DD6CE4551EAB47CA007BB91F /* LibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4541EAB47CA007BB91F /* LibraryUITests.swift */; };
 		DD6CE4651EAB4CB3007BB91F /* GenreListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4641EAB4CB3007BB91F /* GenreListTableViewController.swift */; };
 		DD6CE46C1EAEF407007BB91F /* GenreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE46A1EAEF407007BB91F /* GenreTableViewCell.swift */; };
 		DD6CE46D1EAEF407007BB91F /* GenreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE46B1EAEF407007BB91F /* GenreTableViewCell.xib */; };
 		DD6CE4711EAEF45A007BB91F /* EditGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4701EAEF45A007BB91F /* EditGenreViewController.swift */; };
+		DD96F8091ED9C213004430DB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8021ED9C213004430DB /* .gitignore */; };
+		DD96F80A1ED9C213004430DB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8041ED9C213004430DB /* Default-568h@2x.png */; };
+		DD96F80B1ED9C213004430DB /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8051ED9C213004430DB /* Default-667h@2x.png */; };
+		DD96F80C1ED9C213004430DB /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8061ED9C213004430DB /* Default-736h@3x.png */; };
+		DD96F80D1ED9C213004430DB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DD96F8071ED9C213004430DB /* README.md */; };
+		DD96F80E1ED9C213004430DB /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96F8081ED9C213004430DB /* StoryboardHelper.swift */; };
 		DDC7AF181EB64A3800476ED6 /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */; };
 		DDC7AF1B1EB64A4D00476ED6 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */; };
 		DDC7AF1C1EB64A4D00476ED6 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */; };
@@ -57,7 +62,6 @@
 		DD6CE4361EAB47CA007BB91F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD6CE4391EAB47CA007BB91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD6CE43B1EAB47CA007BB91F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DD6CE43E1EAB47CA007BB91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD6CE4401EAB47CA007BB91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD6CE4451EAB47CA007BB91F /* LibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6CE4491EAB47CA007BB91F /* LibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
@@ -69,6 +73,12 @@
 		DD6CE46A1EAEF407007BB91F /* GenreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreTableViewCell.swift; sourceTree = "<group>"; };
 		DD6CE46B1EAEF407007BB91F /* GenreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenreTableViewCell.xib; sourceTree = "<group>"; };
 		DD6CE4701EAEF45A007BB91F /* EditGenreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGenreViewController.swift; sourceTree = "<group>"; };
+		DD96F8021ED9C213004430DB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DD96F8041ED9C213004430DB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DD96F8051ED9C213004430DB /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		DD96F8061ED9C213004430DB /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		DD96F8071ED9C213004430DB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DD96F8081ED9C213004430DB /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
 		DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
@@ -131,12 +141,12 @@
 				DD6CE4361EAB47CA007BB91F /* ViewController.swift */,
 				DD6CE4381EAB47CA007BB91F /* Main.storyboard */,
 				DD6CE43B1EAB47CA007BB91F /* Assets.xcassets */,
-				DD6CE43D1EAB47CA007BB91F /* LaunchScreen.storyboard */,
 				DD6CE4401EAB47CA007BB91F /* Info.plist */,
 				DD6CE4641EAB4CB3007BB91F /* GenreListTableViewController.swift */,
 				DD6CE46A1EAEF407007BB91F /* GenreTableViewCell.swift */,
 				DD6CE46B1EAEF407007BB91F /* GenreTableViewCell.xib */,
 				DD6CE4701EAEF45A007BB91F /* EditGenreViewController.swift */,
+				DD96F8011ED9C213004430DB /* DMStoryboardHelper-master */,
 				DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */,
 				DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */,
 				DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */,
@@ -162,6 +172,27 @@
 				DD6CE4561EAB47CA007BB91F /* Info.plist */,
 			);
 			path = LibraryUITests;
+			sourceTree = "<group>";
+		};
+		DD96F8011ED9C213004430DB /* DMStoryboardHelper-master */ = {
+			isa = PBXGroup;
+			children = (
+				DD96F8021ED9C213004430DB /* .gitignore */,
+				DD96F8031ED9C213004430DB /* Defaults */,
+				DD96F8071ED9C213004430DB /* README.md */,
+				DD96F8081ED9C213004430DB /* StoryboardHelper.swift */,
+			);
+			path = "DMStoryboardHelper-master";
+			sourceTree = "<group>";
+		};
+		DD96F8031ED9C213004430DB /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				DD96F8041ED9C213004430DB /* Default-568h@2x.png */,
+				DD96F8051ED9C213004430DB /* Default-667h@2x.png */,
+				DD96F8061ED9C213004430DB /* Default-736h@3x.png */,
+			);
+			path = Defaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,14 +304,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD0F8AC11EC9A2DB00543979 /* アセット 4.png in Resources */,
-				DD6CE43F1EAB47CA007BB91F /* LaunchScreen.storyboard in Resources */,
 				DD6CE43C1EAB47CA007BB91F /* Assets.xcassets in Resources */,
 				DD0F8AC71EC9EBAB00543979 /* アセット 1.png in Resources */,
+				DD96F80A1ED9C213004430DB /* Default-568h@2x.png in Resources */,
 				DD6CE46D1EAEF407007BB91F /* GenreTableViewCell.xib in Resources */,
 				DD0F8AC51EC9A80B00543979 /* img.png in Resources */,
 				DD6CE43A1EAB47CA007BB91F /* Main.storyboard in Resources */,
 				DDC7AF1C1EB64A4D00476ED6 /* BookTableViewCell.xib in Resources */,
+				DD96F80B1ED9C213004430DB /* Default-667h@2x.png in Resources */,
+				DD96F8091ED9C213004430DB /* .gitignore in Resources */,
 				DD0F8AB91EC9A06800543979 /* アセット 2.png in Resources */,
+				DD96F80C1ED9C213004430DB /* Default-736h@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,9 +341,11 @@
 			files = (
 				DD6CE4371EAB47CA007BB91F /* ViewController.swift in Sources */,
 				DD6CE4651EAB4CB3007BB91F /* GenreListTableViewController.swift in Sources */,
+				DD96F80D1ED9C213004430DB /* README.md in Sources */,
 				DD0F8AA51EC8A84500543979 /* ComentViewController.swift in Sources */,
 				DDC7AF181EB64A3800476ED6 /* BookListTableViewController.swift in Sources */,
 				DDC7AF1B1EB64A4D00476ED6 /* BookTableViewCell.swift in Sources */,
+				DD96F80E1ED9C213004430DB /* StoryboardHelper.swift in Sources */,
 				DD6CE4351EAB47CA007BB91F /* AppDelegate.swift in Sources */,
 				DDC7AF1E1EB64A6E00476ED6 /* EditBookViewController.swift in Sources */,
 				DD6CE46C1EAEF407007BB91F /* GenreTableViewCell.swift in Sources */,
@@ -355,14 +391,6 @@
 				DD6CE4391EAB47CA007BB91F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DD6CE43D1EAB47CA007BB91F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DD6CE43E1EAB47CA007BB91F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

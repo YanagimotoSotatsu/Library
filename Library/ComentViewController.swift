@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComentViewController: UIViewController ,UINavigationControllerDelegate,UIImagePickerControllerDelegate{
+class ComentViewController: UIViewController {
 
     var row: Int!
     var bookSaveData = UserDefaults.standard
