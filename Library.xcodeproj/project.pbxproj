@@ -29,6 +29,7 @@
 		DD96F80D1ED9C213004430DB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DD96F8071ED9C213004430DB /* README.md */; };
 		DD96F80E1ED9C213004430DB /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96F8081ED9C213004430DB /* StoryboardHelper.swift */; };
 		DD96F8121ED9C432004430DB /* 3.5inch.storyboad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8111ED9C432004430DB /* 3.5inch.storyboad.storyboard */; };
+		DD96F81A1EDF0050004430DB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8191EDF0050004430DB /* icon.png */; };
 		DDC7AF181EB64A3800476ED6 /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */; };
 		DDC7AF1B1EB64A4D00476ED6 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */; };
 		DDC7AF1C1EB64A4D00476ED6 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */; };
@@ -81,6 +82,7 @@
 		DD96F8071ED9C213004430DB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD96F8081ED9C213004430DB /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		DD96F8111ED9C432004430DB /* 3.5inch.storyboad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 3.5inch.storyboad.storyboard; sourceTree = "<group>"; };
+		DD96F8191EDF0050004430DB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
 		DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		DD6CE4331EAB47CA007BB91F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DD96F8191EDF0050004430DB /* icon.png */,
 				DD0F8AC61EC9EBAB00543979 /* アセット 1.png */,
 				DD0F8AC41EC9A80B00543979 /* img.png */,
 				DD0F8AC01EC9A2DB00543979 /* アセット 4.png */,
@@ -314,6 +317,7 @@
 				DD6CE46D1EAEF407007BB91F /* GenreTableViewCell.xib in Resources */,
 				DD0F8AC51EC9A80B00543979 /* img.png in Resources */,
 				DD6CE43A1EAB47CA007BB91F /* Main.storyboard in Resources */,
+				DD96F81A1EDF0050004430DB /* icon.png in Resources */,
 				DDC7AF1C1EB64A4D00476ED6 /* BookTableViewCell.xib in Resources */,
 				DD96F80B1ED9C213004430DB /* Default-667h@2x.png in Resources */,
 				DD96F8091ED9C213004430DB /* .gitignore in Resources */,
