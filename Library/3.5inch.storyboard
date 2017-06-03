@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h8D-rL-iDU" id="ByJ-sk-cKm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -184,7 +184,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iIk-bB-Gqt" id="yLr-dz-Q4j">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -356,24 +356,6 @@
             </objects>
             <point key="canvasLocation" x="1382" y="-64"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="KKM-fx-Dre">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yyi-6G-cLF" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xj6-3A-4uC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Hdk-ic-O6H" kind="relationship" relationship="rootViewController" id="gjg-tG-W5q"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tmV-iM-If8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1381.875" y="-732.04225352112678"/>
-        </scene>
     </scenes>
     <resources>
         <image name="img.png" width="282" height="372"/>
@@ -381,7 +363,4 @@
         <image name="アセット 2.png" width="301" height="256"/>
         <image name="アセット 4.png" width="195" height="243"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gjg-tG-W5q"/>
-    </inferredMetricsTieBreakers>
 </document>

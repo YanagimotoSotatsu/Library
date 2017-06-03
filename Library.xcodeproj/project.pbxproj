@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,6 @@
 		DD6CE4371EAB47CA007BB91F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4361EAB47CA007BB91F /* ViewController.swift */; };
 		DD6CE43A1EAB47CA007BB91F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE4381EAB47CA007BB91F /* Main.storyboard */; };
 		DD6CE43C1EAB47CA007BB91F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE43B1EAB47CA007BB91F /* Assets.xcassets */; };
-		DD6CE44A1EAB47CA007BB91F /* LibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4491EAB47CA007BB91F /* LibraryTests.swift */; };
-		DD6CE4551EAB47CA007BB91F /* LibraryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4541EAB47CA007BB91F /* LibraryUITests.swift */; };
 		DD6CE4651EAB4CB3007BB91F /* GenreListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE4641EAB4CB3007BB91F /* GenreListTableViewController.swift */; };
 		DD6CE46C1EAEF407007BB91F /* GenreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6CE46A1EAEF407007BB91F /* GenreTableViewCell.swift */; };
 		DD6CE46D1EAEF407007BB91F /* GenreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD6CE46B1EAEF407007BB91F /* GenreTableViewCell.xib */; };
@@ -28,30 +26,12 @@
 		DD96F80C1ED9C213004430DB /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8061ED9C213004430DB /* Default-736h@3x.png */; };
 		DD96F80D1ED9C213004430DB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DD96F8071ED9C213004430DB /* README.md */; };
 		DD96F80E1ED9C213004430DB /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96F8081ED9C213004430DB /* StoryboardHelper.swift */; };
-		DD96F8121ED9C432004430DB /* 3.5inch.storyboad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8111ED9C432004430DB /* 3.5inch.storyboad.storyboard */; };
-		DD96F81A1EDF0050004430DB /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8191EDF0050004430DB /* icon.png */; };
+		DD96F8121ED9C432004430DB /* 3.5inch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD96F8111ED9C432004430DB /* 3.5inch.storyboard */; };
 		DDC7AF181EB64A3800476ED6 /* BookListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */; };
 		DDC7AF1B1EB64A4D00476ED6 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */; };
 		DDC7AF1C1EB64A4D00476ED6 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */; };
 		DDC7AF1E1EB64A6E00476ED6 /* EditBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC7AF1D1EB64A6E00476ED6 /* EditBookViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DD6CE4461EAB47CA007BB91F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD6CE4291EAB47CA007BB91F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DD6CE4301EAB47CA007BB91F;
-			remoteInfo = Library;
-		};
-		DD6CE4511EAB47CA007BB91F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD6CE4291EAB47CA007BB91F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DD6CE4301EAB47CA007BB91F;
-			remoteInfo = Library;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DD0F8AA41EC8A84500543979 /* ComentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComentViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +45,8 @@
 		DD6CE4391EAB47CA007BB91F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD6CE43B1EAB47CA007BB91F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD6CE4401EAB47CA007BB91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD6CE4451EAB47CA007BB91F /* LibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6CE4491EAB47CA007BB91F /* LibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTests.swift; sourceTree = "<group>"; };
 		DD6CE44B1EAB47CA007BB91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD6CE4501EAB47CA007BB91F /* LibraryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibraryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6CE4541EAB47CA007BB91F /* LibraryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryUITests.swift; sourceTree = "<group>"; };
 		DD6CE4561EAB47CA007BB91F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD6CE4641EAB4CB3007BB91F /* GenreListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreListTableViewController.swift; sourceTree = "<group>"; };
@@ -81,8 +59,7 @@
 		DD96F8061ED9C213004430DB /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		DD96F8071ED9C213004430DB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD96F8081ED9C213004430DB /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
-		DD96F8111ED9C432004430DB /* 3.5inch.storyboad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 3.5inch.storyboad.storyboard; sourceTree = "<group>"; };
-		DD96F8191EDF0050004430DB /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DD96F8111ED9C432004430DB /* 3.5inch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = 3.5inch.storyboard; sourceTree = "<group>"; };
 		DDC7AF171EB64A3800476ED6 /* BookListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListTableViewController.swift; sourceTree = "<group>"; };
 		DDC7AF191EB64A4D00476ED6 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
@@ -91,20 +68,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		DD6CE42E1EAB47CA007BB91F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD6CE4421EAB47CA007BB91F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD6CE44D1EAB47CA007BB91F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,13 +86,12 @@
 				DD6CE4321EAB47CA007BB91F /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		DD6CE4321EAB47CA007BB91F /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				DD6CE4311EAB47CA007BB91F /* Library.app */,
-				DD6CE4451EAB47CA007BB91F /* LibraryTests.xctest */,
-				DD6CE4501EAB47CA007BB91F /* LibraryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,7 +99,6 @@
 		DD6CE4331EAB47CA007BB91F /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				DD96F8191EDF0050004430DB /* icon.png */,
 				DD0F8AC61EC9EBAB00543979 /* アセット 1.png */,
 				DD0F8AC41EC9A80B00543979 /* img.png */,
 				DD0F8AC01EC9A2DB00543979 /* アセット 4.png */,
@@ -157,7 +118,7 @@
 				DDC7AF1A1EB64A4D00476ED6 /* BookTableViewCell.xib */,
 				DDC7AF1D1EB64A6E00476ED6 /* EditBookViewController.swift */,
 				DD0F8AA41EC8A84500543979 /* ComentViewController.swift */,
-				DD96F8111ED9C432004430DB /* 3.5inch.storyboad.storyboard */,
+				DD96F8111ED9C432004430DB /* 3.5inch.storyboard */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -221,42 +182,6 @@
 			productReference = DD6CE4311EAB47CA007BB91F /* Library.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DD6CE4441EAB47CA007BB91F /* LibraryTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD6CE45C1EAB47CA007BB91F /* Build configuration list for PBXNativeTarget "LibraryTests" */;
-			buildPhases = (
-				DD6CE4411EAB47CA007BB91F /* Sources */,
-				DD6CE4421EAB47CA007BB91F /* Frameworks */,
-				DD6CE4431EAB47CA007BB91F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DD6CE4471EAB47CA007BB91F /* PBXTargetDependency */,
-			);
-			name = LibraryTests;
-			productName = LibraryTests;
-			productReference = DD6CE4451EAB47CA007BB91F /* LibraryTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DD6CE44F1EAB47CA007BB91F /* LibraryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD6CE45F1EAB47CA007BB91F /* Build configuration list for PBXNativeTarget "LibraryUITests" */;
-			buildPhases = (
-				DD6CE44C1EAB47CA007BB91F /* Sources */,
-				DD6CE44D1EAB47CA007BB91F /* Frameworks */,
-				DD6CE44E1EAB47CA007BB91F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DD6CE4521EAB47CA007BB91F /* PBXTargetDependency */,
-			);
-			name = LibraryUITests;
-			productName = LibraryUITests;
-			productReference = DD6CE4501EAB47CA007BB91F /* LibraryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,23 +194,13 @@
 				TargetAttributes = {
 					DD6CE4301EAB47CA007BB91F = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = QH3XE2T8GB;
+						DevelopmentTeam = 2K446D59RQ;
 						ProvisioningStyle = Automatic;
-					};
-					DD6CE4441EAB47CA007BB91F = {
-						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = DD6CE4301EAB47CA007BB91F;
-					};
-					DD6CE44F1EAB47CA007BB91F = {
-						CreatedOnToolsVersion = 8.3.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = DD6CE4301EAB47CA007BB91F;
 					};
 				};
 			};
 			buildConfigurationList = DD6CE42C1EAB47CA007BB91F /* Build configuration list for PBXProject "Library" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -298,8 +213,6 @@
 			projectRoot = "";
 			targets = (
 				DD6CE4301EAB47CA007BB91F /* Library */,
-				DD6CE4441EAB47CA007BB91F /* LibraryTests */,
-				DD6CE44F1EAB47CA007BB91F /* LibraryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,30 +226,15 @@
 				DD6CE43C1EAB47CA007BB91F /* Assets.xcassets in Resources */,
 				DD0F8AC71EC9EBAB00543979 /* アセット 1.png in Resources */,
 				DD96F80A1ED9C213004430DB /* Default-568h@2x.png in Resources */,
-				DD96F8121ED9C432004430DB /* 3.5inch.storyboad.storyboard in Resources */,
+				DD96F8121ED9C432004430DB /* 3.5inch.storyboard in Resources */,
 				DD6CE46D1EAEF407007BB91F /* GenreTableViewCell.xib in Resources */,
 				DD0F8AC51EC9A80B00543979 /* img.png in Resources */,
 				DD6CE43A1EAB47CA007BB91F /* Main.storyboard in Resources */,
-				DD96F81A1EDF0050004430DB /* icon.png in Resources */,
 				DDC7AF1C1EB64A4D00476ED6 /* BookTableViewCell.xib in Resources */,
 				DD96F80B1ED9C213004430DB /* Default-667h@2x.png in Resources */,
 				DD96F8091ED9C213004430DB /* .gitignore in Resources */,
 				DD0F8AB91EC9A06800543979 /* アセット 2.png in Resources */,
 				DD96F80C1ED9C213004430DB /* Default-736h@3x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD6CE4431EAB47CA007BB91F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD6CE44E1EAB47CA007BB91F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,36 +259,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD6CE4411EAB47CA007BB91F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD6CE44A1EAB47CA007BB91F /* LibraryTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD6CE44C1EAB47CA007BB91F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD6CE4551EAB47CA007BB91F /* LibraryUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DD6CE4471EAB47CA007BB91F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DD6CE4301EAB47CA007BB91F /* Library */;
-			targetProxy = DD6CE4461EAB47CA007BB91F /* PBXContainerItemProxy */;
-		};
-		DD6CE4521EAB47CA007BB91F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DD6CE4301EAB47CA007BB91F /* Library */;
-			targetProxy = DD6CE4511EAB47CA007BB91F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DD6CE4381EAB47CA007BB91F /* Main.storyboard */ = {
@@ -501,13 +370,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QH3XE2T8GB;
+				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = Library/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yanagimoto.Library;
+				PRODUCT_BUNDLE_IDENTIFIER = baggio.library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -515,67 +385,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QH3XE2T8GB;
+				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = Library/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yanagimoto.Library;
+				PRODUCT_BUNDLE_IDENTIFIER = baggio.library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		DD6CE45D1EAB47CA007BB91F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = LibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yanagimoto.LibraryTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Library.app/Library";
-			};
-			name = Debug;
-		};
-		DD6CE45E1EAB47CA007BB91F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = LibraryTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yanagimoto.LibraryTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Library.app/Library";
-			};
-			name = Release;
-		};
-		DD6CE4601EAB47CA007BB91F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = LibraryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yanagimoto.LibraryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Library;
-			};
-			name = Debug;
-		};
-		DD6CE4611EAB47CA007BB91F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = LibraryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yanagimoto.LibraryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Library;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -596,24 +413,6 @@
 			buildConfigurations = (
 				DD6CE45A1EAB47CA007BB91F /* Debug */,
 				DD6CE45B1EAB47CA007BB91F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD6CE45C1EAB47CA007BB91F /* Build configuration list for PBXNativeTarget "LibraryTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD6CE45D1EAB47CA007BB91F /* Debug */,
-				DD6CE45E1EAB47CA007BB91F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD6CE45F1EAB47CA007BB91F /* Build configuration list for PBXNativeTarget "LibraryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD6CE4601EAB47CA007BB91F /* Debug */,
-				DD6CE4611EAB47CA007BB91F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
